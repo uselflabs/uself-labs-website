@@ -46,6 +46,14 @@ updates:
       actions:
         patterns:
           - "*"
+    ignore:
+      # Referenced as @v4 on GitHub's own recommendation so CodeQL engine
+      # updates apply automatically. It ships roughly weekly, so pinning
+      # the patch would be pure PR churn; a major bump still surfaces.
+      - dependency-name: github/codeql-action
+        update-types:
+          - version-update:semver-minor
+          - version-update:semver-patch
 
   # ----------------------------------------
   # Docker base image (node:24-alpine)
