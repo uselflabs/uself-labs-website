@@ -47,6 +47,13 @@ FROM node:22-alpine AS runner
 
 WORKDIR /app
 
+# Drop the bundled npm CLI — the standalone server runs via `node server.js`
+# and never invokes npm, but npm's own dependency tree (tar, brace-expansion,
+# sigstore, …) accounts for every CVE reported against this image.
+RUN rm -rf /usr/local/lib/node_modules/npm \
+    /usr/local/bin/npm \
+    /usr/local/bin/npx
+
 # Production environment
 ENV NODE_ENV=production
 ENV NEXT_TELEMETRY_DISABLED=1
