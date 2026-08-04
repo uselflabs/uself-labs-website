@@ -1,0 +1,113 @@
+# ============================================================
+# Security Audit
+# Trigger: Push/PR to main, weekly schedule, manual
+#
+# Gating policy:
+#   - npm audit is BLOCKING — vulnerabilities in our own lockfile
+#     are actionable, so a high/critical finding fails the run.
+#   - CodeQL and Trivy REPORT to the Security tab without failing.
+#     Base-image CVEs are frequently unfixable upstream; blocking on
+#     them would wedge deploys for issues we cannot resolve.
+# ============================================================
+
+name: Security Audit
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+  # Catch newly-disclosed CVEs in unchanged code
+  schedule:
+    - cron: "0 3 * * 1" # Every Monday, 03:00 UTC
+
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  # ==========================================================
+  # 1. Dependency vulnerabilities (blocking gate)
+  # ==========================================================
+  dependencies:
+    name: Dependency Audit
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          cache: npm
+
+      # Reads package-lock.json directly — no install needed
+      - name: Audit dependencies
+        run: npm audit --audit-level=high
+
+  # ==========================================================
+  # 2. Static analysis of application code
+  # ==========================================================
+  codeql:
+    name: CodeQL Analysis
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+      security-events: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+
+      # build-mode: none — JS/TS needs no compilation to analyze
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@v4
+        with:
+          languages: javascript-typescript
+          build-mode: none
+          queries: security-extended
+
+      - name: Perform CodeQL analysis
+        uses: github/codeql-action/analyze@v4
+        with:
+          category: /language:javascript-typescript
+
+  # ==========================================================
+  # 3. Dockerfile misconfiguration scan
+  # ==========================================================
+  dockerfile:
+    name: Dockerfile Scan
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+      security-events: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+
+      - name: Scan Dockerfile for misconfigurations
+        uses: aquasecurity/trivy-action@v0.36.0
+        with:
+          scan-type: config
+          scan-ref: .
+          format: sarif
+          output: trivy-config.sarif
+          # Report-only — see gating policy above
+          exit-code: "0"
+
+      - name: Upload results to code scanning
+        uses: github/codeql-action/upload-sarif@v4
+        with:
+          sarif_file: trivy-config.sarif
+          category: trivy-config

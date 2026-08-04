@@ -1,0 +1,58 @@
+# ============================================================
+# Dependabot — automated dependency updates
+# Security patches arrive immediately regardless of schedule;
+# the intervals below govern routine version bumps.
+# ============================================================
+
+version: 2
+
+updates:
+  # ----------------------------------------
+  # npm dependencies
+  # ----------------------------------------
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+    open-pull-requests-limit: 5
+    groups:
+      # Next.js and React move together — separate PRs would
+      # produce unbuildable intermediate states
+      react-next:
+        patterns:
+          - "next"
+          - "react"
+          - "react-dom"
+          - "@types/react"
+          - "@types/react-dom"
+      # Routine dev tooling, batched to reduce PR noise
+      dev-tooling:
+        dependency-type: development
+        exclude-patterns:
+          - "@types/react"
+          - "@types/react-dom"
+
+  # ----------------------------------------
+  # GitHub Actions used by our workflows
+  # ----------------------------------------
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+    open-pull-requests-limit: 5
+    groups:
+      actions:
+        patterns:
+          - "*"
+
+  # ----------------------------------------
+  # Docker base image (node:22-alpine)
+  # ----------------------------------------
+  - package-ecosystem: docker
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+    open-pull-requests-limit: 3
