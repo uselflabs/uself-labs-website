@@ -48,7 +48,7 @@ updates:
           - "*"
 
   # ----------------------------------------
-  # Docker base image (node:22-alpine)
+  # Docker base image (node:24-alpine)
   # ----------------------------------------
   - package-ecosystem: docker
     directory: /
@@ -56,3 +56,11 @@ updates:
       interval: weekly
       day: monday
     open-pull-requests-limit: 3
+    ignore:
+      # The tag floats within a major, so 24.x patches — including CVE
+      # fixes — land on rebuild without a PR. Major bumps are declined
+      # because Dependabot offers the newest line regardless of LTS
+      # status; revisit deliberately when the active LTS advances.
+      - dependency-name: node
+        update-types:
+          - version-update:semver-major
