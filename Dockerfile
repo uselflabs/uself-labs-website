@@ -45,6 +45,8 @@ RUN npm run build
 # ------------------------------------
 FROM node:24-alpine AS runner
 
+RUN apk add --no-cache libc6-compat
+
 WORKDIR /app
 
 # Drop the bundled npm CLI — the standalone server runs via `node server.js`
@@ -67,7 +69,7 @@ RUN addgroup --system --gid 1001 nodejs && \
     adduser --system --uid 1001 nextjs
 
 # Copy public assets (static files served directly)
-COPY --from=builder /app/public ./public
+COPY --from=builder --chown=nextjs:nodejs /app/public ./public
 
 # Set correct permissions for prerender cache
 RUN mkdir .next && chown nextjs:nodejs .next
@@ -85,7 +87,7 @@ EXPOSE 3000
 
 # Health check for container orchestration
 HEALTHCHECK --interval=30s --timeout=5s --start-period=10s --retries=3 \
-    CMD wget --no-verbose --tries=1 --spider http://localhost:3000/ || exit 1
+    CMD wget --no-verbose --tries=1 --spider http://127.0.0.1:3000/vi || exit 1
 
-# Start the standalone Next.js server
-CMD ["node", "server.js"]
+# Start the standalone Next.js server with HOSTNAME=0.0.0.0
+CMD ["sh", "-c", "HOSTNAME=0.0.0.0 exec node server.js"]
