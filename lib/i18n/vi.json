@@ -1,0 +1,348 @@
+{
+  "meta": {
+    "positioning": "USelf Labs là lab phần mềm tại Việt Nam, chuyên hệ thống AI agent và dịch vụ backend, đồng thời tự phát hành ứng dụng và trò chơi.",
+    "defaultTitle": "USelf Labs - Lab phần mềm và AI agent",
+    "titleTemplate": "%s | USelf Labs"
+  },
+  "nav": {
+    "home": "Trang chủ",
+    "services": "Năng lực",
+    "work": "Sản phẩm",
+    "about": "Giới thiệu",
+    "contact": "Liên hệ",
+    "cta": "Bắt đầu dự án",
+    "menuOpen": "Mở menu",
+    "menuClose": "Đóng menu"
+  },
+  "common": {
+    "ctaPrimary": "Bắt đầu dự án",
+    "ctaSecondary": "Xem sản phẩm",
+    "playLabel": "Xem trên Google Play"
+  },
+  "footer": {
+    "columns": {
+      "company": "Các trang",
+      "connect": "Kết nối"
+    },
+    "email": "support@uselflabs.com",
+    "address": "Việt Nam",
+    "copyright": "USelf Labs. Giữ toàn quyền."
+  },
+  "home": {
+    "hero": {
+      "headline": "Agent chạy được trên codebase thật, không chỉ trong bản demo.",
+      "appsLabel": "Ba ứng dụng USelf Labs đã phát hành trên Google Play"
+    },
+    "stack": {
+      "heading": "Công nghệ sử dụng hằng ngày",
+      "logos": [
+        {
+          "slug": "kotlin",
+          "name": "Kotlin"
+        },
+        {
+          "slug": "python",
+          "name": "Python"
+        },
+        {
+          "slug": "openjdk",
+          "name": "Java"
+        },
+        {
+          "slug": "typescript",
+          "name": "TypeScript"
+        },
+        {
+          "slug": "springboot",
+          "name": "Spring Boot"
+        },
+        {
+          "slug": "fastapi",
+          "name": "FastAPI"
+        },
+        {
+          "slug": "nextdotjs",
+          "name": "Next.js"
+        },
+        {
+          "slug": "godotengine",
+          "name": "Godot Engine"
+        },
+        {
+          "slug": "githubactions",
+          "name": "GitHub Actions"
+        }
+      ]
+    },
+    "domains": {
+      "heading": "Bốn lĩnh vực kỹ thuật",
+      "items": [
+        {
+          "id": "ai-agents",
+          "title": "AI coding agent và hệ thống agent",
+          "body": "Xây nguyên tắc hành vi và cơ chế chống hallucination để agent không tự bịa code. Bao gồm kiến trúc MCP và bộ skill dạng module cho Codex, Claude Code, Gemini."
+        },
+        {
+          "id": "backend-services",
+          "title": "Dịch vụ backend hiệu năng cao",
+          "body": "Xây microservice nhanh và ổn định bằng Spring Boot, Node.js và FastAPI, bao gồm cả những API tính toán đòi hỏi độ chính xác cao."
+        },
+        {
+          "id": "fullstack-creative",
+          "title": "Web fullstack và hệ thống sáng tạo",
+          "body": "Phát triển ứng dụng web bằng Next.js, TypeScript và React, cùng các engine mô phỏng có luồng dữ liệu rõ ràng."
+        },
+        {
+          "id": "developer-tooling",
+          "title": "Công cụ và tự động hoá cho lập trình viên",
+          "body": "Dựng pipeline CI/CD, công cụ dòng lệnh và sandbox để agent thực thi an toàn, giúp việc phát hành trở nên đều đặn."
+        }
+      ]
+    },
+    "selectedWork": {
+      "heading": "Sản phẩm tự phát hành",
+      "lead": "Ba ứng dụng và trò chơi hiện có trên Google Play, do USelf Labs tự phát triển và phát hành.",
+      "viewAll": "Xem chi tiết sản phẩm"
+    },
+    "ctaBand": {
+      "headline": "Bạn có dự án cần xây dựng?",
+      "body": "Mô tả ngắn bài toán của bạn và nhận phản hồi trong vòng một ngày làm việc."
+    }
+  },
+  "services": {
+    "hero": {
+      "headline": "Năng lực",
+      "intro": "USelf Labs làm việc trên bốn lĩnh vực: hệ thống AI agent, dịch vụ backend, web fullstack và công cụ cho lập trình viên."
+    },
+    "list": [
+      {
+        "id": "ai-agents",
+        "title": "AI coding agent và hệ thống agent",
+        "description": "Thiết kế kiến trúc và guardrail cho AI coding agent, để agent làm việc được trên codebase thật thay vì chỉ chạy đẹp trong bản demo.",
+        "deliverables": [
+          "Nguyên tắc hành vi và cơ chế chống hallucination",
+          "Luồng làm việc cho OpenAI Codex, Claude Code và Gemini",
+          "Kiến trúc Model Context Protocol và bộ skill dạng module",
+          "Sandbox để agent thực thi an toàn"
+        ],
+        "tech": [
+          "Claude Code",
+          "OpenAI Codex",
+          "Gemini API",
+          "MCP"
+        ]
+      },
+      {
+        "id": "backend-services",
+        "title": "Dịch vụ backend hiệu năng cao",
+        "description": "Xây microservice và API ổn định, kể cả những phần tính toán đòi hỏi độ chính xác cao.",
+        "deliverables": [
+          "Kiến trúc microservice và mô hình dữ liệu",
+          "API tính toán khoa học",
+          "Kiểm thử tự động cho từng tầng dịch vụ"
+        ],
+        "tech": [
+          "Spring Boot",
+          "FastAPI",
+          "Node.js",
+          "Python"
+        ]
+      },
+      {
+        "id": "fullstack-creative",
+        "title": "Web fullstack và hệ thống sáng tạo",
+        "description": "Phát triển ứng dụng web và các hệ thống mô phỏng tương tác, bao gồm cả trò chơi.",
+        "deliverables": [
+          "Ứng dụng web với Next.js, TypeScript và React",
+          "Engine mô phỏng với luồng dữ liệu rõ ràng",
+          "Trò chơi di động phát hành trên Google Play"
+        ],
+        "tech": [
+          "Next.js",
+          "TypeScript",
+          "React",
+          "Godot Engine"
+        ]
+      },
+      {
+        "id": "developer-tooling",
+        "title": "Công cụ và tự động hoá cho lập trình viên",
+        "description": "Xây công cụ và pipeline để việc phát hành trở nên đều đặn và ít sai sót.",
+        "deliverables": [
+          "Pipeline CI/CD và tự động phát hành",
+          "Công cụ dòng lệnh nội bộ",
+          "Bộ công cụ tăng năng suất cho đội phát triển"
+        ],
+        "tech": [
+          "GitHub Actions",
+          "Fastlane",
+          "Bash",
+          "Git"
+        ]
+      }
+    ],
+    "faq": {
+      "heading": "Câu hỏi thường gặp",
+      "items": [
+        {
+          "question": "USelf Labs có quy mô như thế nào?",
+          "answer": "USelf Labs hiện do một kỹ sư vận hành, và chủ động nhận ít dự án cùng lúc để giữ chất lượng kỹ thuật."
+        },
+        {
+          "question": "USelf Labs có nhận dự án ngắn hạn không?",
+          "answer": "Có. USelf Labs nhận cả dự án ngắn hạn theo từng giai đoạn và hợp tác dài hạn theo tháng."
+        },
+        {
+          "question": "USelf Labs có tự phát hành sản phẩm của riêng mình không?",
+          "answer": "Có. Hiện có ba ứng dụng và trò chơi trên Google Play là Velora, Dream Courier và 1000 Lives."
+        },
+        {
+          "question": "Công cụ của USelf Labs có mã nguồn mở không?",
+          "answer": "Một phần. Các bộ skill và nguyên tắc hành vi cho AI coding agent được công khai trên GitHub."
+        },
+        {
+          "question": "Quy trình làm việc bắt đầu như thế nào?",
+          "answer": "Bắt đầu bằng một buổi trao đổi để hiểu bài toán, sau đó USelf Labs đề xuất phạm vi công việc và mốc thời gian cụ thể."
+        },
+        {
+          "question": "Mã nguồn và dữ liệu của khách hàng được bảo mật ra sao?",
+          "answer": "Mã nguồn thuộc quyền sở hữu của khách hàng. Quyền truy cập hệ thống được giới hạn theo từng dự án, và ký thoả thuận bảo mật khi cần."
+        }
+      ]
+    },
+    "ctaBand": {
+      "headline": "Chưa rõ phần nào phù hợp?",
+      "body": "Gửi mô tả ngắn về bài toán và nhận lại đề xuất hướng tiếp cận."
+    }
+  },
+  "work": {
+    "hero": {
+      "headline": "Sản phẩm tự phát hành",
+      "intro": "USelf Labs tự phát triển và phát hành ứng dụng, trò chơi trên Google Play. Đây cũng là nơi thử nghiệm kỹ thuật với người dùng thật, trước khi áp dụng vào dự án của khách hàng."
+    },
+    "screenshotsLabel": "Ảnh chụp trong ứng dụng",
+    "highlightsLabel": "Điểm nổi bật",
+    "apps": [
+      {
+        "id": "velora",
+        "category": "Phong cách sống",
+        "name": "Velora: AI Tarot & Horoscope",
+        "tagline": "Tarot, tử vi và thần số học bằng AI, cá nhân hoá theo bản đồ sao của từng người.",
+        "description": "Người dùng chỉ nhập thông tin ngày sinh một lần. Sau đó mọi luận giải đều do AI tạo riêng dựa trên bản đồ sao của họ, thay vì một nội dung dùng chung cho tất cả mọi người.",
+        "highlights": [
+          "Dự báo năng lượng mỗi ngày theo bản đồ sao",
+          "Trò chuyện cùng AI về tình cảm, công việc và bản thân",
+          "Rút tarot với bộ Rider-Waite 78 lá",
+          "Bản đồ sao và thần số học giải thích dễ hiểu"
+        ]
+      },
+      {
+        "id": "dream-courier",
+        "category": "Nhập vai",
+        "name": "Dream Courier: Cozy Idle RPG",
+        "tagline": "Game nhập vai idle nhẹ nhàng về một người đưa thư nhỏ bé trong thế giới giấc mơ.",
+        "description": "Mỗi lượt chơi tự động diễn ra, việc của người chơi là quyết định cách dựng nên lượt chơi đó. Một Dream Sentence ghép từ ba Word gồm Action, Image và Tone, nên 18 Dream Word tạo ra 216 tổ hợp khác nhau.",
+        "highlights": [
+          "18 Dream Word cho 216 tổ hợp lối chơi",
+          "Tự động chiến đấu, không cần bấm liên tục",
+          "3 chương với 30 màn, 11 loại kẻ địch và 3 trùm",
+          "16 trang bị để nâng cấp dần"
+        ]
+      },
+      {
+        "id": "1000-lives",
+        "category": "Mô phỏng",
+        "name": "1000 Lives: Life Simulator",
+        "tagline": "Game mô phỏng cuộc đời: vuốt trái hoặc phải, và nghiệp kiếp trước theo bạn sang kiếp sau.",
+        "description": "Mỗi lựa chọn kéo người chơi giữa bốn yếu tố: Sự nghiệp, Gia đình, Tiền bạc và Bản thân. Chỉ cần một yếu tố về không hoặc chạm mức tối đa là cuộc đời đó kết thúc, và phần nghiệp còn lại được ghi vào Karma Ledger cho kiếp tiếp theo.",
+        "highlights": [
+          "Bốn yếu tố phải giữ cân bằng cùng lúc",
+          "Nghiệp được lưu lại và ảnh hưởng sang kiếp sau",
+          "Mỗi lần kết thúc sinh ra một lá tarot riêng",
+          "Mỗi cuộc đời chỉ khoảng 2 đến 4 phút"
+        ]
+      }
+    ]
+  },
+  "about": {
+    "hero": {
+      "headline": "Giới thiệu",
+      "intro": "USelf Labs là lab phần mềm tại Việt Nam, tập trung vào hệ thống AI agent, kiến trúc phần mềm và công cụ tự động hoá cho lập trình viên."
+    },
+    "story": {
+      "heading": "USelf Labs hình thành như thế nào",
+      "body": "USelf Labs bắt đầu từ một câu hỏi trong công việc kỹ thuật hằng ngày: làm sao để AI coding agent thực sự dùng được trên codebase thật, chứ không chỉ chạy đẹp trong bản demo. Trả lời câu hỏi đó dần thành các bộ nguyên tắc và skill dùng lại được. Song song, những ứng dụng và trò chơi tự phát hành trên Google Play giữ vai trò kiểm chứng: một nguyên tắc kỹ thuật chỉ được xem là dùng được sau khi đã sống trong sản phẩm có người dùng thật."
+    },
+    "values": {
+      "heading": "Nguyên tắc làm việc",
+      "items": [
+        {
+          "title": "Không bịa code",
+          "body": "Mọi API và thư viện đều được kiểm chứng là có thật trước khi đưa vào code."
+        },
+        {
+          "title": "Kiểm chứng bằng test",
+          "body": "Theo Test-Driven Development. Một tính năng chỉ được xem là xong khi có test chứng minh."
+        },
+        {
+          "title": "Tối giản ma sát",
+          "body": "Chọn giải pháp đơn giản nhất giải quyết được vấn đề, không thêm lớp trừu tượng không ai cần."
+        },
+        {
+          "title": "Module hoá để mở rộng",
+          "body": "Ranh giới giữa các module rõ ràng, để sửa một phần không kéo theo phần còn lại."
+        }
+      ]
+    }
+  },
+  "contact": {
+    "hero": {
+      "headline": "Liên hệ",
+      "intro": "Mô tả bài toán của bạn và nhận phản hồi từ USelf Labs trong vòng một ngày làm việc."
+    },
+    "form": {
+      "name": {
+        "label": "Họ và tên",
+        "helper": ""
+      },
+      "email": {
+        "label": "Email công việc",
+        "helper": "Chỉ dùng để phản hồi lại bạn."
+      },
+      "company": {
+        "label": "Công ty",
+        "helper": "Không bắt buộc."
+      },
+      "message": {
+        "label": "Mô tả bài toán",
+        "helper": "Càng cụ thể thì phản hồi càng sát."
+      },
+      "submit": "Gửi liên hệ",
+      "submitting": "Đang gửi…",
+      "success": {
+        "title": "Đã gửi thành công",
+        "body": "Cảm ơn bạn đã liên hệ. USelf Labs sẽ phản hồi trong vòng một ngày làm việc."
+      },
+      "error": {
+        "title": "Gửi không thành công",
+        "body": "Chưa gửi được tin nhắn. Vui lòng thử lại hoặc gửi email trực tiếp."
+      },
+      "validation": {
+        "nameRequired": "Vui lòng nhập họ và tên.",
+        "emailRequired": "Vui lòng nhập email.",
+        "emailInvalid": "Email chưa đúng định dạng.",
+        "messageRequired": "Vui lòng mô tả ngắn bài toán của bạn."
+      }
+    },
+    "info": {
+      "heading": "Thông tin liên hệ",
+      "email": "support@uselflabs.com",
+      "address": "Việt Nam",
+      "hours": "Thứ Hai đến Thứ Sáu, 9:00 đến 18:00"
+    }
+  },
+  "a11y": {
+    "skipToContent": "Chuyển tới nội dung chính",
+    "switchLanguage": "Chuyển sang tiếng Anh"
+  }
+}

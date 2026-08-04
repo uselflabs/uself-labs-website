@@ -1,0 +1,348 @@
+{
+  "meta": {
+    "positioning": "USelf Labs is a software lab in Vietnam building AI agent systems, backend services, and its own apps and games.",
+    "defaultTitle": "USelf Labs - Software and AI Agent Lab",
+    "titleTemplate": "%s | USelf Labs"
+  },
+  "nav": {
+    "home": "Home",
+    "services": "Capabilities",
+    "work": "Products",
+    "about": "About",
+    "contact": "Contact",
+    "cta": "Start a project",
+    "menuOpen": "Open menu",
+    "menuClose": "Close menu"
+  },
+  "common": {
+    "ctaPrimary": "Start a project",
+    "ctaSecondary": "See the products",
+    "playLabel": "View on Google Play"
+  },
+  "footer": {
+    "columns": {
+      "company": "Pages",
+      "connect": "Connect"
+    },
+    "email": "support@uselflabs.com",
+    "address": "Vietnam",
+    "copyright": "USelf Labs. All rights reserved."
+  },
+  "home": {
+    "hero": {
+      "headline": "Agents that hold up in a real codebase, not just in a demo.",
+      "appsLabel": "Three apps USelf Labs has published on Google Play"
+    },
+    "stack": {
+      "heading": "Technology used day to day",
+      "logos": [
+        {
+          "slug": "kotlin",
+          "name": "Kotlin"
+        },
+        {
+          "slug": "python",
+          "name": "Python"
+        },
+        {
+          "slug": "openjdk",
+          "name": "Java"
+        },
+        {
+          "slug": "typescript",
+          "name": "TypeScript"
+        },
+        {
+          "slug": "springboot",
+          "name": "Spring Boot"
+        },
+        {
+          "slug": "fastapi",
+          "name": "FastAPI"
+        },
+        {
+          "slug": "nextdotjs",
+          "name": "Next.js"
+        },
+        {
+          "slug": "godotengine",
+          "name": "Godot Engine"
+        },
+        {
+          "slug": "githubactions",
+          "name": "GitHub Actions"
+        }
+      ]
+    },
+    "domains": {
+      "heading": "Four engineering domains",
+      "items": [
+        {
+          "id": "ai-agents",
+          "title": "AI coding and agent systems",
+          "body": "Behavioral rules and anti-hallucination protocols that stop an agent inventing code. Includes MCP architecture and modular skillsets for Codex, Claude Code and Gemini."
+        },
+        {
+          "id": "backend-services",
+          "title": "High-performance backend services",
+          "body": "Fast, dependable microservices built with Spring Boot, Node.js and FastAPI, including calculation APIs where precision matters."
+        },
+        {
+          "id": "fullstack-creative",
+          "title": "Fullstack web and creative systems",
+          "body": "Web applications built with Next.js, TypeScript and React, plus simulation engines with a clear data flow."
+        },
+        {
+          "id": "developer-tooling",
+          "title": "Developer tooling and automation",
+          "body": "CI/CD pipelines, command-line tools, and sandboxes that let agents execute safely, so releases stay routine."
+        }
+      ]
+    },
+    "selectedWork": {
+      "heading": "Self-published products",
+      "lead": "Three apps and games currently on Google Play, built and published by USelf Labs.",
+      "viewAll": "See product details"
+    },
+    "ctaBand": {
+      "headline": "Have a project to build?",
+      "body": "Send a short description of your problem and get a reply within one business day."
+    }
+  },
+  "services": {
+    "hero": {
+      "headline": "Capabilities",
+      "intro": "USelf Labs works across four domains: AI agent systems, backend services, fullstack web, and developer tooling."
+    },
+    "list": [
+      {
+        "id": "ai-agents",
+        "title": "AI coding and agent systems",
+        "description": "Architecture and guardrails for AI coding agents, so they hold up inside a real codebase instead of only looking good in a demo.",
+        "deliverables": [
+          "Behavioral rules and anti-hallucination protocols",
+          "Agent workflows for OpenAI Codex, Claude Code and Gemini",
+          "Model Context Protocol architecture and modular skillsets",
+          "Sandboxes for agents to execute safely"
+        ],
+        "tech": [
+          "Claude Code",
+          "OpenAI Codex",
+          "Gemini API",
+          "MCP"
+        ]
+      },
+      {
+        "id": "backend-services",
+        "title": "High-performance backend services",
+        "description": "Dependable microservices and APIs, including the calculation-heavy parts where precision matters.",
+        "deliverables": [
+          "Microservice architecture and data modeling",
+          "Scientific calculation APIs",
+          "Automated tests at every service layer"
+        ],
+        "tech": [
+          "Spring Boot",
+          "FastAPI",
+          "Node.js",
+          "Python"
+        ]
+      },
+      {
+        "id": "fullstack-creative",
+        "title": "Fullstack web and creative systems",
+        "description": "Web applications and interactive simulation systems, games included.",
+        "deliverables": [
+          "Web applications with Next.js, TypeScript and React",
+          "Simulation engines with a clear data flow",
+          "Mobile games published on Google Play"
+        ],
+        "tech": [
+          "Next.js",
+          "TypeScript",
+          "React",
+          "Godot Engine"
+        ]
+      },
+      {
+        "id": "developer-tooling",
+        "title": "Developer tooling and automation",
+        "description": "Tools and pipelines that make shipping routine instead of risky.",
+        "deliverables": [
+          "CI/CD pipelines and automated releases",
+          "Internal command-line tools",
+          "Productivity toolchains for the development team"
+        ],
+        "tech": [
+          "GitHub Actions",
+          "Fastlane",
+          "Bash",
+          "Git"
+        ]
+      }
+    ],
+    "faq": {
+      "heading": "Frequently asked questions",
+      "items": [
+        {
+          "question": "How big is USelf Labs?",
+          "answer": "USelf Labs is run by one engineer, and deliberately takes on few projects at a time to keep engineering quality high."
+        },
+        {
+          "question": "Does USelf Labs take on short-term projects?",
+          "answer": "Yes. Both short-term, phase-based projects and longer monthly engagements."
+        },
+        {
+          "question": "Does USelf Labs publish its own products?",
+          "answer": "Yes. Three apps and games are on Google Play: Velora, Dream Courier and 1000 Lives."
+        },
+        {
+          "question": "Is USelf Labs' tooling open source?",
+          "answer": "Partly. The skillsets and behavioral rules for AI coding agents are public on GitHub."
+        },
+        {
+          "question": "How does an engagement start?",
+          "answer": "It starts with a conversation to understand the problem, after which USelf Labs proposes a concrete scope and timeline."
+        },
+        {
+          "question": "How is client code and data kept secure?",
+          "answer": "Source code belongs to the client. System access is scoped per project, and a confidentiality agreement is signed when needed."
+        }
+      ]
+    },
+    "ctaBand": {
+      "headline": "Not sure which part fits?",
+      "body": "Send a short description of your problem and get a suggested approach back."
+    }
+  },
+  "work": {
+    "hero": {
+      "headline": "Self-published products",
+      "intro": "USelf Labs builds and publishes its own apps and games on Google Play. They double as the place techniques get tested on real users, before they reach client work."
+    },
+    "screenshotsLabel": "In-app screenshots",
+    "highlightsLabel": "Highlights",
+    "apps": [
+      {
+        "id": "velora",
+        "category": "Lifestyle",
+        "name": "Velora: AI Tarot & Horoscope",
+        "tagline": "AI tarot, horoscope and numerology, personalized to each person's own birth chart.",
+        "description": "A user enters their birth details once. Every reading after that is generated by AI around their individual chart, instead of one horoscope written for everybody.",
+        "highlights": [
+          "A daily energy forecast drawn from your chart",
+          "AI chat about love, career and yourself",
+          "Tarot readings with the 78-card Rider-Waite deck",
+          "Birth chart and numerology in plain language"
+        ]
+      },
+      {
+        "id": "dream-courier",
+        "category": "Role Playing",
+        "name": "Dream Courier: Cozy Idle RPG",
+        "tagline": "A gentle idle RPG about a small courier carrying letters through a world of dreams.",
+        "description": "Each run plays out on its own, and the player's job is deciding how that run gets built. A Dream Sentence combines three Words, an Action, an Image and a Tone, so 18 Dream Words produce 216 different combinations.",
+        "highlights": [
+          "18 Dream Words for 216 playstyle combinations",
+          "Runs battle automatically, with no tapping needed",
+          "3 chapters across 30 stages, 11 enemy types and 3 bosses",
+          "16 pieces of equipment to upgrade over time"
+        ]
+      },
+      {
+        "id": "1000-lives",
+        "category": "Simulation",
+        "name": "1000 Lives: Life Simulator",
+        "tagline": "A life simulator played by swiping: one life's karma follows you into the next.",
+        "description": "Every choice pulls the player between four forces: Career, Family, Money and Self. One of them hitting zero or maxing out ends that life, and whatever karma is left gets written into the Karma Ledger for the next one.",
+        "highlights": [
+          "Four forces to hold in balance at once",
+          "Karma persists and shapes the life that follows",
+          "Every ending produces its own tarot card",
+          "Each life runs about 2 to 4 minutes"
+        ]
+      }
+    ]
+  },
+  "about": {
+    "hero": {
+      "headline": "About",
+      "intro": "USelf Labs is a software lab in Vietnam focused on AI agent systems, software architecture, and developer automation tooling."
+    },
+    "story": {
+      "heading": "How USelf Labs came about",
+      "body": "USelf Labs started from one question that kept coming up in day-to-day engineering work: how do you make an AI coding agent genuinely usable inside a real codebase, rather than merely impressive in a demo. Answering it turned into a set of reusable rules and skillsets. In parallel, the self-published apps and games on Google Play do the checking: a principle only counts as usable once it has survived inside a product with real users."
+    },
+    "values": {
+      "heading": "How the work is done",
+      "items": [
+        {
+          "title": "No invented code",
+          "body": "Every API and library is verified to actually exist before it reaches the codebase."
+        },
+        {
+          "title": "Proven by tests",
+          "body": "Test-Driven Development throughout. A feature counts as done when a test proves it."
+        },
+        {
+          "title": "Minimal friction",
+          "body": "The simplest solution that solves the problem, with no abstraction layer nobody asked for."
+        },
+        {
+          "title": "Modular by default",
+          "body": "Clear boundaries between modules, so changing one part does not drag the rest along."
+        }
+      ]
+    }
+  },
+  "contact": {
+    "hero": {
+      "headline": "Contact",
+      "intro": "Describe your problem and get a reply from USelf Labs within one business day."
+    },
+    "form": {
+      "name": {
+        "label": "Full name",
+        "helper": ""
+      },
+      "email": {
+        "label": "Work email",
+        "helper": "Only used to reply to you."
+      },
+      "company": {
+        "label": "Company",
+        "helper": "Optional."
+      },
+      "message": {
+        "label": "Describe your problem",
+        "helper": "The more specific, the more useful the reply."
+      },
+      "submit": "Send message",
+      "submitting": "Sending…",
+      "success": {
+        "title": "Message sent",
+        "body": "Thank you for reaching out. USelf Labs will reply within one business day."
+      },
+      "error": {
+        "title": "Something went wrong",
+        "body": "The message could not be sent. Please try again, or email directly."
+      },
+      "validation": {
+        "nameRequired": "Please enter your full name.",
+        "emailRequired": "Please enter your email.",
+        "emailInvalid": "This email address does not look valid.",
+        "messageRequired": "Please describe your problem briefly."
+      }
+    },
+    "info": {
+      "heading": "Contact information",
+      "email": "support@uselflabs.com",
+      "address": "Vietnam",
+      "hours": "Monday to Friday, 9:00 to 18:00"
+    }
+  },
+  "a11y": {
+    "skipToContent": "Skip to main content",
+    "switchLanguage": "Switch to Vietnamese"
+  }
+}

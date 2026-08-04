@@ -1,0 +1,103 @@
+@import "tailwindcss";
+
+:root {
+  --surface: #06060f;
+  --surface-raised: #0d0e1a;
+  --text-primary: #f2f3f7;
+  --text-muted: #9aa0b4;
+  --text-faint: #7d8299;
+  --accent: #0074fe;
+  --accent-solid: #0046d4;
+  --accent-solid-hover: #00337d;
+  --accent-cyan: #00fafe;
+  --border: rgba(242, 243, 247, 0.09);
+  --border-strong: rgba(242, 243, 247, 0.16);
+  --danger-border: rgba(248, 113, 113, 0.45);
+  --danger-surface: rgba(248, 113, 113, 0.1);
+  --danger-text: #fca5a5;
+  --radius-md: 10px;
+}
+
+@theme inline {
+  --color-surface: var(--surface);
+  --color-surface-raised: var(--surface-raised);
+  --color-text-primary: var(--text-primary);
+  --color-text-muted: var(--text-muted);
+  --color-text-faint: var(--text-faint);
+  --color-accent: var(--accent);
+  --color-accent-solid: var(--accent-solid);
+  --color-accent-solid-hover: var(--accent-solid-hover);
+  --color-accent-cyan: var(--accent-cyan);
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+  --color-danger-border: var(--danger-border);
+  --color-danger-surface: var(--danger-surface);
+  --color-danger-text: var(--danger-text);
+  --radius-md: var(--radius-md);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+* {
+  border-color: var(--border);
+}
+
+html {
+  color-scheme: dark;
+  /* Removes the 300ms double-tap zoom delay on touch devices. */
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--surface);
+  color: var(--text-primary);
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+/* Single global focus treatment, so no interactive element ships without one. */
+:focus-visible {
+  outline: 2px solid var(--accent-cyan);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Anchored section headings clear the sticky header. */
+:target {
+  scroll-margin-top: 6rem;
+}
+
+/*
+ * Scroll-reveal. Gated on `scripting: enabled` so that with JavaScript off, or
+ * for a crawler that does not execute it, content renders plainly visible
+ * instead of being stuck at opacity 0. Only opacity and transform animate.
+ */
+@media (scripting: enabled) and (prefers-reduced-motion: no-preference) {
+  [data-reveal] {
+    opacity: 0;
+    transform: translateY(20px);
+    transition:
+      opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+      transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  [data-reveal][data-revealed] {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
