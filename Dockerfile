@@ -7,7 +7,7 @@
 # ------------------------------------
 # Stage 1: Install dependencies only
 # ------------------------------------
-FROM node:22-alpine AS deps
+FROM node:26-alpine AS deps
 
 # Check https://github.com/nodejs/docker-node/tree/b4117f9333da4138b03a546ec926ef50a31506c3#nodealpine
 # for understanding why libc6-compat might be needed
@@ -24,7 +24,7 @@ RUN npm ci --ignore-scripts
 # ------------------------------------
 # Stage 2: Build the application
 # ------------------------------------
-FROM node:22-alpine AS builder
+FROM node:26-alpine AS builder
 
 WORKDIR /app
 
@@ -43,7 +43,7 @@ RUN npm run build
 # ------------------------------------
 # Stage 3: Production runner
 # ------------------------------------
-FROM node:22-alpine AS runner
+FROM node:26-alpine AS runner
 
 WORKDIR /app
 
