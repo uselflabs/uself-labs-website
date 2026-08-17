@@ -32,10 +32,10 @@ export function CtaBand({
           </p>
           <Link
             href={`/${locale}/contact`}
-            className="mt-8 inline-flex items-center gap-2 rounded-full bg-accent-solid px-6 py-3 text-sm font-semibold text-text-primary transition-colors hover:bg-accent-solid-hover"
+            className="btn-tactile mt-8 inline-flex items-center gap-2 rounded-full bg-accent-solid px-6 py-3 text-sm font-semibold text-text-primary shadow-lg shadow-accent/25 transition-all hover:bg-accent-solid-hover"
           >
             {cta}
-            <ArrowRight size={16} weight="bold" />
+            <ArrowRight size={16} weight="bold" aria-hidden />
           </Link>
         </Reveal>
       </div>

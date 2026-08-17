@@ -14,12 +14,83 @@ export type ContactFormState = {
 
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
+function escapeHtml(str: string): string {
+  return str
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;");
+}
+
+async function sendTelegramNotification({
+  name,
+  email,
+  company,
+  message,
+  locale,
+}: {
+  name: string;
+  email: string;
+  company?: string;
+  message: string;
+  locale: string;
+}): Promise<boolean> {
+  const token = process.env.TELEGRAM_BOT_TOKEN;
+  const chatId = process.env.TELEGRAM_CHAT_ID;
+
+  if (!token || !chatId) {
+    console.log("[contact] (dev mode: no Telegram credentials) submission:", {
+      name,
+      email,
+      company,
+      message,
+      locale,
+    });
+    return true;
+  }
+
+  const safeName = escapeHtml(name);
+  const safeEmail = escapeHtml(email);
+  const safeCompany = escapeHtml(company || "N/A");
+  const safeMessage = escapeHtml(message);
+
+  const text =
+    `📬 <b>New Contact Inquiry - USelf Labs</b>\n\n` +
+    `👤 <b>Name:</b> ${safeName}\n` +
+    `📧 <b>Email:</b> ${safeEmail}\n` +
+    `🏢 <b>Company:</b> ${safeCompany}\n` +
+    `🌐 <b>Language:</b> ${locale.toUpperCase()}\n\n` +
+    `💬 <b>Message:</b>\n${safeMessage}`;
+
+  try {
+    const res = await fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        chat_id: chatId,
+        text,
+        parse_mode: "HTML",
+      }),
+    });
+
+    if (!res.ok) {
+      const errData = await res.text();
+      console.error("[contact] Telegram API error:", errData);
+      return false;
+    }
+    return true;
+  } catch (err) {
+    console.error("[contact] Failed to send Telegram notification:", err);
+    return false;
+  }
+}
+
 export async function submitContactForm(
   locale: Locale,
   _prevState: ContactFormState,
   formData: FormData,
 ): Promise<ContactFormState> {
-  const validation = getDictionary(locale).contact.form.validation;
+  const dictionary = getDictionary(locale);
+  const validation = dictionary.contact.form.validation;
 
   const name = String(formData.get("name") ?? "").trim();
   const email = String(formData.get("email") ?? "").trim();
@@ -36,9 +107,22 @@ export async function submitContactForm(
     return { status: "error", errors };
   }
 
-  // TODO(user): wire this up to a real email or CRM service (e.g. Resend,
-  // Postmark, HubSpot). For now submissions are only logged server-side.
-  console.log("[contact] new submission", { name, email, company, message });
+  const sent = await sendTelegramNotification({
+    name,
+    email,
+    company,
+    message,
+    locale,
+  });
+
+  if (!sent && process.env.TELEGRAM_BOT_TOKEN) {
+    return {
+      status: "error",
+      errors: {
+        message: dictionary.contact.form.error.body,
+      },
+    };
+  }
 
   return { status: "success", errors: {} };
 }

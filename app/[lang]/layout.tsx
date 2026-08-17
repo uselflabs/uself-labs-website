@@ -44,6 +44,22 @@ export async function generateMetadata({
       template: dictionary.meta.titleTemplate,
     },
     description,
+    applicationName: SITE_NAME,
+    authors: [{ name: SITE_NAME, url: SITE_URL }],
+    keywords: [
+      "AI coding agents",
+      "Model Context Protocol",
+      "Backend microservices",
+      "Fullstack web development",
+      "Mobile games",
+      "Puzzena logic puzzles",
+      "Binary puzzle",
+      "Tents and trees",
+      "Shikaku",
+      "Nonogram picross",
+      "USelf Labs",
+      "Software lab Vietnam",
+    ],
     alternates: {
       canonical: absoluteUrl(lang),
       languages: buildAlternates(),
@@ -56,6 +72,11 @@ export async function generateMetadata({
       locale: localeToOgLocale(lang),
       alternateLocale: localeToOgLocale(otherLocale(lang)),
       type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: dictionary.meta.defaultTitle,
+      description,
     },
   };
 }

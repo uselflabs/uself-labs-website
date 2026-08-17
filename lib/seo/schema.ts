@@ -30,7 +30,11 @@ export function organizationSchema(locale: Locale) {
       "@type": "PostalAddress",
       addressCountry: "VN",
     },
-    sameAs: [GITHUB_URL, PLAY_DEVELOPER_URL],
+    sameAs: [
+      GITHUB_URL,
+      PLAY_DEVELOPER_URL,
+      "https://puzzena.uselflabs.com/",
+    ],
     knowsAbout: [
       "AI coding agents",
       "Model Context Protocol",
@@ -38,6 +42,7 @@ export function organizationSchema(locale: Locale) {
       "Fullstack web development",
       "Mobile apps and games",
       "Developer tooling and automation",
+      "Logic puzzles and deductive reasoning algorithms",
     ],
   };
 }
@@ -108,18 +113,44 @@ export function softwareApplicationSchema(
   const asset = APPS_BY_ID[app.id];
   const isGame = asset.kind === "game";
 
+  const categoryMap: Record<string, string> = {
+    puzzena: "PuzzleApplication",
+    "dream-courier": "RolePlayingApplication",
+    "1000-lives": "SimulationApplication",
+    velora: "LifestyleApplication",
+  };
+
+  const genreMap: Record<string, string[]> = {
+    puzzena: ["Puzzle", "Logic Game", "Brain Teaser", "Picross", "Binairo", "Nonogram"],
+    "dream-courier": ["Role Playing", "Idle RPG", "Cozy Game", "Adventure"],
+    "1000-lives": ["Simulation", "Card Game", "Life Simulator"],
+    velora: ["Lifestyle", "Astrology", "Horoscope", "Tarot"],
+  };
+
   return {
     "@context": "https://schema.org",
     "@type": isGame ? "MobileApplication" : "SoftwareApplication",
     name: app.name,
     description: app.tagline,
-    applicationCategory: isGame ? "GameApplication" : "LifestyleApplication",
+    applicationCategory: categoryMap[app.id] || (isGame ? "GameApplication" : "SoftwareApplication"),
     operatingSystem: "Android",
-    url: asset.playUrl,
+    genre: genreMap[app.id] || (isGame ? ["Game"] : ["Application"]),
+    contentRating: "Everyone",
+    url: asset.webUrl || asset.playUrl,
     installUrl: asset.playUrl,
+    downloadUrl: asset.playUrl,
+    sameAs: asset.webUrl ? [asset.playUrl, asset.webUrl] : [asset.playUrl],
     image: `${SITE_URL}${asset.icon.src}`,
     screenshot: asset.screenshots.map((s) => `${SITE_URL}${s.src}`),
+    offers: {
+      "@type": "Offer",
+      price: "0",
+      priceCurrency: "USD",
+      availability: "https://schema.org/InStock",
+    },
+    featureList: app.highlights,
     publisher: { "@id": ORGANIZATION_ID },
+    author: { "@id": ORGANIZATION_ID },
     inLanguage: locale,
   };
 }

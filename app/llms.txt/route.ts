@@ -25,36 +25,47 @@ export function GET() {
     `# ${SITE_NAME}`,
     "",
     `> ${en.meta.positioning}`,
-    `> ${vi.meta.positioning} (Vietnamese)`,
     "",
-    "## Engineering domains",
-    ...en.home.domains.items.map((d) => `- ${d.title}: ${d.body}`),
+    "## Products & Games",
     "",
-    "## Published apps and games (Google Play)",
-    ...en.work.apps.map(
-      (a) => `- ${a.name} (${a.category}): ${a.tagline} ${APPS_BY_ID[a.id].playUrl}`,
+    ...en.work.apps.map((a) => {
+      const asset = APPS_BY_ID[a.id];
+      const webPart = asset.webUrl ? ` Web: ${asset.webUrl}.` : "";
+      return `- [${a.name}](${asset.webUrl || asset.playUrl}): ${a.tagline} ${a.description} Google Play: ${asset.playUrl}.${webPart}`;
+    }),
+    "",
+    "## Engineering Capabilities",
+    "",
+    ...en.services.list.map(
+      (s) => `- [${s.title}](${absoluteUrl("en", "/services")}#${s.id}): ${s.description} Technologies: ${s.tech.join(", ")}. Deliverables: ${s.deliverables.join("; ")}.`,
     ),
-    `- All apps by this developer: ${PLAY_DEVELOPER_URL}`,
     "",
-    "## Pages (English)",
+    "## Documentation & Pages (English)",
+    "",
     ...pageEntries("en").map(
       (p) => `- [${p.title}](${absoluteUrl("en", p.path)}): ${p.description}`,
     ),
     "",
-    "## Trang (Tiếng Việt)",
+    "## Tài liệu & Các trang (Tiếng Việt)",
+    "",
     ...pageEntries("vi").map(
       (p) => `- [${p.title}](${absoluteUrl("vi", p.path)}): ${p.description}`,
     ),
     "",
-    "## Contact",
-    `- Email: ${en.footer.email}`,
+    "## Frequently Asked Questions",
+    "",
+    ...en.services.faq.items.map(
+      (faq) => `- **${faq.question}**: ${faq.answer}`,
+    ),
+    "",
+    "## Optional",
+    "",
+    `- [Full Website Knowledge Dump](${SITE_URL}/llms-full.txt): Complete plain-text content of all pages in English and Vietnamese for comprehensive context window ingestion.`,
+    `- [XML Sitemap](${SITE_URL}/sitemap.xml): Complete URL index for web crawlers.`,
+    `- [Google Play Developer Profile](${PLAY_DEVELOPER_URL}): All published apps and games on Google Play.`,
+    `- [GitHub Organization](https://github.com/uselflabs): Open-source agent skillsets and tooling.`,
+    `- Contact Email: ${en.footer.email}`,
     `- Location: ${en.footer.address}`,
-    "",
-    "## Languages",
-    "- English: /en/*",
-    "- Vietnamese: /vi/*",
-    "",
-    `Full text content: ${SITE_URL}/llms-full.txt`,
   ];
 
   return new NextResponse(lines.join("\n") + "\n", {

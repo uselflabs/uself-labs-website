@@ -17,21 +17,22 @@
   "common": {
     "ctaPrimary": "Bắt đầu dự án",
     "ctaSecondary": "Xem sản phẩm",
-    "playLabel": "Xem trên Google Play"
+    "playLabel": "Xem trên Google Play",
+    "webLabel": "Trang giới thiệu"
   },
   "footer": {
     "columns": {
       "company": "Các trang",
       "connect": "Kết nối"
     },
-    "email": "support@uselflabs.com",
+    "email": "admin@uselflabs.com",
     "address": "Việt Nam",
     "copyright": "USelf Labs. Giữ toàn quyền."
   },
   "home": {
     "hero": {
       "headline": "Agent chạy được trên codebase thật, không chỉ trong bản demo.",
-      "appsLabel": "Ba ứng dụng USelf Labs đã phát hành trên Google Play"
+      "appsLabel": "Các ứng dụng và trò chơi USelf Labs đã phát hành trên Google Play"
     },
     "stack": {
       "heading": "Công nghệ sử dụng hằng ngày",
@@ -101,7 +102,7 @@
     },
     "selectedWork": {
       "heading": "Sản phẩm tự phát hành",
-      "lead": "Ba ứng dụng và trò chơi hiện có trên Google Play, do USelf Labs tự phát triển và phát hành.",
+      "lead": "Bốn ứng dụng và trò chơi hiện có trên Google Play, do USelf Labs tự phát triển và phát hành.",
       "viewAll": "Xem chi tiết sản phẩm"
     },
     "ctaBand": {
@@ -194,7 +195,7 @@
         },
         {
           "question": "USelf Labs có tự phát hành sản phẩm của riêng mình không?",
-          "answer": "Có. Hiện có ba ứng dụng và trò chơi trên Google Play là Velora, Dream Courier và 1000 Lives."
+          "answer": "Có. Hiện có bốn ứng dụng và trò chơi trên Google Play là Puzzena, Velora, Dream Courier và 1000 Lives."
         },
         {
           "question": "Công cụ của USelf Labs có mã nguồn mở không?",
@@ -223,6 +224,20 @@
     "screenshotsLabel": "Ảnh chụp trong ứng dụng",
     "highlightsLabel": "Điểm nổi bật",
     "apps": [
+      {
+        "id": "puzzena",
+        "category": "Trí tuệ",
+        "name": "Puzzena: Logic Grid Puzzles",
+        "tagline": "Bộ sưu tập câu đố logic kinh điển: Binary, Tents & Trees, Shikaku và Nonogram.",
+        "description": "Khám phá hơn 9.000 câu đố logic thuộc 4 thể loại kinh điển: Binary Puzzle (Binairo), Tents & Trees (Cắm trại), Shikaku (Chia hình chữ nhật) và Nonogram (Picross / Tô màu pixel). Mỗi câu đố đều được kiểm chứng có duy nhất 1 đáp án và giải hoàn toàn bằng suy luận logic thuần túy, không cần đoán mò. Chơi offline 100%.",
+        "highlights": [
+          "Hơn 9.000 câu đố thuộc 4 thể loại logic kinh điển",
+          "Suy luận logic 100%, không cần đoán mò hay thử sai",
+          "Binary Puzzle, Tents & Trees, Shikaku và Nonogram (Picross)",
+          "Chơi offline hoàn toàn với giao diện Sáng, Tối và Sepia",
+          "Gợi ý thông minh, kiểm tra lỗi, hoàn tác vô hạn và tự lưu"
+        ]
+      },
       {
         "id": "velora",
         "category": "Phong cách sống",
@@ -336,7 +351,7 @@
     },
     "info": {
       "heading": "Thông tin liên hệ",
-      "email": "support@uselflabs.com",
+      "email": "admin@uselflabs.com",
       "address": "Việt Nam",
       "hours": "Thứ Hai đến Thứ Sáu, 9:00 đến 18:00"
     }

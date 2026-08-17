@@ -24,31 +24,32 @@ export function Domains({
         </h2>
       </Reveal>
 
-      {/* 4 items, 4 cells: a 2x2 grid where the first cell carries the accent
-          tint so the block is not four identical boxes. */}
-      <div className="mt-10 grid grid-cols-1 gap-4 md:grid-cols-2">
+      {/* 4 items, 4 cells: 2x2 grid with rich subtle lighting */}
+      <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2">
         {domains.items.map((item, index) => {
           const DomainIcon = DOMAIN_ICONS[item.id];
           const accented = index === 0;
           return (
             <Reveal key={item.id} delay={index * 0.06}>
               <article
-                className={`flex h-full flex-col gap-4 rounded-[10px] border p-6 lg:p-8 ${
+                className={`card-hover-glow flex h-full flex-col gap-4 rounded-2xl border p-7 lg:p-8 transition-all ${
                   accented
-                    ? "border-accent/30 bg-accent/10"
-                    : "border-border bg-surface-raised"
+                    ? "border-accent/40 bg-gradient-to-br from-accent/15 via-surface-card to-surface-raised shadow-lg shadow-accent/5"
+                    : "border-border bg-surface-raised/80 hover:bg-surface-card"
                 }`}
               >
-                <DomainIcon
-                  size={24}
-                  weight="regular"
-                  className={accented ? "text-accent-cyan" : "text-accent"}
-                  aria-hidden
-                />
+                <div className="flex h-11 w-11 items-center justify-center rounded-xl border border-border bg-surface shadow-sm">
+                  <DomainIcon
+                    size={22}
+                    weight="bold"
+                    className={accented ? "text-accent-cyan" : "text-accent"}
+                    aria-hidden
+                  />
+                </div>
                 <h3 className="text-lg font-semibold text-text-primary">
                   {item.title}
                 </h3>
-                <p className="max-w-[52ch] text-sm leading-relaxed text-text-muted">
+                <p className="max-w-[54ch] text-sm leading-relaxed text-text-muted">
                   {item.body}
                 </p>
               </article>

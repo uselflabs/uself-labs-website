@@ -17,21 +17,22 @@
   "common": {
     "ctaPrimary": "Start a project",
     "ctaSecondary": "See the products",
-    "playLabel": "View on Google Play"
+    "playLabel": "View on Google Play",
+    "webLabel": "Visit Website"
   },
   "footer": {
     "columns": {
       "company": "Pages",
       "connect": "Connect"
     },
-    "email": "support@uselflabs.com",
+    "email": "admin@uselflabs.com",
     "address": "Vietnam",
     "copyright": "USelf Labs. All rights reserved."
   },
   "home": {
     "hero": {
       "headline": "Agents that hold up in a real codebase, not just in a demo.",
-      "appsLabel": "Three apps USelf Labs has published on Google Play"
+      "appsLabel": "Apps and games USelf Labs has published on Google Play"
     },
     "stack": {
       "heading": "Technology used day to day",
@@ -101,7 +102,7 @@
     },
     "selectedWork": {
       "heading": "Self-published products",
-      "lead": "Three apps and games currently on Google Play, built and published by USelf Labs.",
+      "lead": "Four apps and games currently on Google Play, built and published by USelf Labs.",
       "viewAll": "See product details"
     },
     "ctaBand": {
@@ -194,7 +195,7 @@
         },
         {
           "question": "Does USelf Labs publish its own products?",
-          "answer": "Yes. Three apps and games are on Google Play: Velora, Dream Courier and 1000 Lives."
+          "answer": "Yes. Four apps and games are on Google Play: Puzzena, Velora, Dream Courier and 1000 Lives."
         },
         {
           "question": "Is USelf Labs' tooling open source?",
@@ -223,6 +224,20 @@
     "screenshotsLabel": "In-app screenshots",
     "highlightsLabel": "Highlights",
     "apps": [
+      {
+        "id": "puzzena",
+        "category": "Puzzle",
+        "name": "Puzzena: Logic Grid Puzzles",
+        "tagline": "Classic grid-based logic puzzles: Binary, Tents & Trees, Shikaku, and Nonogram.",
+        "description": "Explore 9,000+ logic puzzles across 4 distinct types: Binary Puzzle (Binairo), Tents & Trees, Shikaku, and Nonogram (Picross). Every puzzle is mathematically pre-verified to have one unique solution solvable strictly through pure deduction. 100% offline with zero guesswork.",
+        "highlights": [
+          "9,000+ verified logic puzzles across 4 classic types",
+          "100% solvable through pure deduction (no guessing)",
+          "Binary Puzzle, Tents & Trees, Shikaku, and Nonogram",
+          "Fully playable offline with Light, Dark, and Sepia themes",
+          "Smart hints, mistake checker, unlimited undo & auto-save"
+        ]
+      },
       {
         "id": "velora",
         "category": "Lifestyle",
@@ -336,7 +351,7 @@
     },
     "info": {
       "heading": "Contact information",
-      "email": "support@uselflabs.com",
+      "email": "admin@uselflabs.com",
       "address": "Vietnam",
       "hours": "Monday to Friday, 9:00 to 18:00"
     }

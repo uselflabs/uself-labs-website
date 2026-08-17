@@ -60,6 +60,12 @@ RUN rm -rf /usr/local/lib/node_modules/npm \
 ENV NODE_ENV=production
 ENV NEXT_TELEMETRY_DISABLED=1
 
+# Optional baked-in build args for self-hosted / home server deployment
+ARG TELEGRAM_BOT_TOKEN=""
+ARG TELEGRAM_CHAT_ID=""
+ENV TELEGRAM_BOT_TOKEN=$TELEGRAM_BOT_TOKEN
+ENV TELEGRAM_CHAT_ID=$TELEGRAM_CHAT_ID
+
 # Set the application port
 ENV PORT=3000
 ENV HOSTNAME="0.0.0.0"

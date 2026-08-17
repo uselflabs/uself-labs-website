@@ -1,26 +1,33 @@
 @import "tailwindcss";
 
 :root {
-  --surface: #06060f;
-  --surface-raised: #0d0e1a;
-  --text-primary: #f2f3f7;
-  --text-muted: #9aa0b4;
-  --text-faint: #7d8299;
+  --surface: #060711;
+  --surface-raised: #0d0f1e;
+  --surface-card: #121528;
+  --surface-card-hover: #171b33;
+  --text-primary: #f4f5f9;
+  --text-muted: #9ba1b8;
+  --text-faint: #707691;
   --accent: #0074fe;
-  --accent-solid: #0046d4;
-  --accent-solid-hover: #00337d;
-  --accent-cyan: #00fafe;
-  --border: rgba(242, 243, 247, 0.09);
-  --border-strong: rgba(242, 243, 247, 0.16);
+  --accent-solid: #0052e0;
+  --accent-solid-hover: #003db3;
+  --accent-cyan: #00f0ff;
+  --accent-glow: rgba(0, 116, 254, 0.25);
+  --border: rgba(244, 245, 249, 0.08);
+  --border-strong: rgba(244, 245, 249, 0.16);
+  --border-highlight: rgba(0, 240, 255, 0.25);
   --danger-border: rgba(248, 113, 113, 0.45);
   --danger-surface: rgba(248, 113, 113, 0.1);
   --danger-text: #fca5a5;
-  --radius-md: 10px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
 }
 
 @theme inline {
   --color-surface: var(--surface);
   --color-surface-raised: var(--surface-raised);
+  --color-surface-card: var(--surface-card);
+  --color-surface-card-hover: var(--surface-card-hover);
   --color-text-primary: var(--text-primary);
   --color-text-muted: var(--text-muted);
   --color-text-faint: var(--text-faint);
@@ -30,10 +37,12 @@
   --color-accent-cyan: var(--accent-cyan);
   --color-border: var(--border);
   --color-border-strong: var(--border-strong);
+  --color-border-highlight: var(--border-highlight);
   --color-danger-border: var(--danger-border);
   --color-danger-surface: var(--danger-surface);
   --color-danger-text: var(--danger-text);
   --radius-md: var(--radius-md);
+  --radius-lg: var(--radius-lg);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
@@ -44,7 +53,6 @@
 
 html {
   color-scheme: dark;
-  /* Removes the 300ms double-tap zoom delay on touch devices. */
   touch-action: manipulation;
   -webkit-tap-highlight-color: transparent;
   scroll-behavior: smooth;
@@ -54,32 +62,56 @@ body {
   background: var(--surface);
   color: var(--text-primary);
   font-family: var(--font-sans), system-ui, sans-serif;
+  background-image: 
+    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(0, 116, 254, 0.12), transparent 70%),
+    radial-gradient(circle 400px at 90% 20%, rgba(0, 240, 255, 0.04), transparent);
+  background-repeat: no-repeat;
 }
 
-/* Single global focus treatment, so no interactive element ships without one. */
+/* Single global focus treatment */
 :focus-visible {
   outline: 2px solid var(--accent-cyan);
   outline-offset: 2px;
-  border-radius: 4px;
+  border-radius: 6px;
 }
 
-/* Anchored section headings clear the sticky header. */
+/* Anchored section headings clear the sticky header */
 :target {
   scroll-margin-top: 6rem;
 }
 
-/*
- * Scroll-reveal. Gated on `scripting: enabled` so that with JavaScript off, or
- * for a crawler that does not execute it, content renders plainly visible
- * instead of being stuck at opacity 0. Only opacity and transform animate.
- */
+/* Glass panel utility */
+.glass-panel {
+  background: rgba(13, 15, 30, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border);
+}
+
+/* Subtle glow card on hover */
+.card-hover-glow {
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card-hover-glow:hover {
+  transform: translateY(-2px);
+  border-color: var(--border-strong);
+  box-shadow: 0 12px 32px -8px rgba(0, 0, 0, 0.6), 0 0 16px -4px var(--accent-glow);
+}
+
+/* Tactile button push */
+button:active, a.btn-tactile:active {
+  transform: scale(0.98);
+}
+
+/* Scroll-reveal */
 @media (scripting: enabled) and (prefers-reduced-motion: no-preference) {
   [data-reveal] {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(18px);
     transition:
-      opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
-      transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+      opacity 0.55s cubic-bezier(0.16, 1, 0.3, 1),
+      transform 0.55s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
   [data-reveal][data-revealed] {

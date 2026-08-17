@@ -66,6 +66,7 @@ export default async function WorkPage({
       <AppDetailList
         apps={work.apps}
         playLabel={common.playLabel}
+        webLabel={common.webLabel}
         screenshotsLabel={work.screenshotsLabel}
         highlightsLabel={work.highlightsLabel}
       />

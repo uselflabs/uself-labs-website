@@ -22,6 +22,7 @@ export type PublishedApp = {
   kind: "app" | "game";
   packageName: string;
   playUrl: string;
+  webUrl?: string;
   icon: AppImage;
   feature: AppImage;
   screenshots: AppImage[];
@@ -33,6 +34,23 @@ const playUrl = (pkg: string) =>
   `https://play.google.com/store/apps/details?id=${pkg}`;
 
 const PUBLISHED_APPS: PublishedApp[] = [
+  {
+    id: "puzzena",
+    kind: "game",
+    packageName: "com.uself.logicpuzzles",
+    playUrl: playUrl("com.uself.logicpuzzles"),
+    webUrl: "https://puzzena.uselflabs.com/",
+    icon: { src: "/apps/puzzena-icon.webp", width: 1024, height: 1024 },
+    feature: { src: "/apps/puzzena-feature.webp", width: 1794, height: 877 },
+    screenshots: [
+      { src: "/apps/puzzena-shot-0.webp", width: 1080, height: 2400 },
+      { src: "/apps/puzzena-shot-1.webp", width: 1080, height: 2400 },
+      { src: "/apps/puzzena-shot-2.webp", width: 1080, height: 2400 },
+      { src: "/apps/puzzena-shot-3.webp", width: 1080, height: 2400 },
+      { src: "/apps/puzzena-shot-4.webp", width: 1080, height: 2400 },
+    ],
+    screenshotAspect: "9 / 20",
+  },
   {
     id: "velora",
     kind: "app",
@@ -89,3 +107,4 @@ export const PLAY_DEVELOPER_URL =
   "https://play.google.com/store/apps/dev?id=4759355575361087914";
 
 export const GITHUB_URL = "https://github.com/uselflabs";
+

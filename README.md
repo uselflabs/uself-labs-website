@@ -61,7 +61,7 @@ The footer still links to the GitHub **profile** (`github.com/uselflabs`), which
 
 ## Still needs your input
 
-1. **`support@uselflabs.com `** (`lib/i18n/*.json`, used in the footer, contact page, and `Organization.email`) is assumed, not confirmed. Change it if the real address differs.
+1. **`admin@uselflabs.com `** (`lib/i18n/*.json`, used in the footer, contact page, and `Organization.email`) is assumed, not confirmed. Change it if the real address differs.
 2. **Contact form** (`app/[lang]/contact/actions.ts`) validates input and logs to the server console, but is not wired to an email or CRM service. Marked `TODO(user)` at the exact spot.
 3. **`SITE_URL`** is `https://uselflabs.com`, which matches the `blog` field on the GitHub profile. Canonical URLs, hreflang, the sitemap, and JSON-LD all derive from this one constant.
 4. **Address** says only "Vietnam". The Play Store listing exposes a full street address in Vĩnh Long; it was deliberately left off the site since it looks like a private residence. Add a business address if you want one shown.
