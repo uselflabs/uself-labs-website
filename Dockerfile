@@ -37,6 +37,12 @@ COPY . .
 # Disable Next.js telemetry during build
 ENV NEXT_TELEMETRY_DISABLED=1
 
+# Deployment identity, baked in at build time. Read by next.config.ts for
+# version-skew protection — CI passes the git SHA. Empty means no protection,
+# which is fine for a local `docker build` but must be set for real deploys.
+ARG NEXT_DEPLOYMENT_ID=""
+ENV NEXT_DEPLOYMENT_ID=$NEXT_DEPLOYMENT_ID
+
 # Build Next.js standalone output
 RUN npm run build
 
