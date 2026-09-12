@@ -18,7 +18,10 @@
     "ctaPrimary": "Start a project",
     "ctaSecondary": "See the products",
     "playLabel": "View on Google Play",
-    "webLabel": "Visit Website"
+    "playLabelCompact": "Google Play",
+    "webLabel": "Product site",
+    "webLabelCompact": "Website",
+    "detailsLabel": "View details"
   },
   "footer": {
     "columns": {
@@ -31,8 +34,10 @@
   },
   "home": {
     "hero": {
-      "headline": "Agents that hold up in a real codebase, not just in a demo.",
-      "appsLabel": "Apps and games USelf Labs has published on Google Play"
+      "headline": "Agents that run on real codebases, not just in demos.",
+      "appsLabel": "Apps and games published by USelf Labs on Google Play",
+      "featuredBadge": "New Release",
+      "liveCountSuffix": "Live Products"
     },
     "stack": {
       "heading": "Technology used day to day",
@@ -102,8 +107,9 @@
     },
     "selectedWork": {
       "heading": "Self-published products",
-      "lead": "Four apps and games currently on Google Play, built and published by USelf Labs.",
-      "viewAll": "See product details"
+      "lead": "Five apps and games currently on Google Play, built and published by USelf Labs.",
+      "viewAll": "See product details",
+      "featuredBadge": "New Release"
     },
     "ctaBand": {
       "headline": "Have a project to build?",
@@ -195,7 +201,7 @@
         },
         {
           "question": "Does USelf Labs publish its own products?",
-          "answer": "Yes. Four apps and games are on Google Play: Puzzena, Velora, Dream Courier and 1000 Lives."
+          "answer": "Yes. Five apps and games are on Google Play: pulso, Puzzena, Velora, Dream Courier and 1000 Lives."
         },
         {
           "question": "Is USelf Labs' tooling open source?",
@@ -224,6 +230,20 @@
     "screenshotsLabel": "In-app screenshots",
     "highlightsLabel": "Highlights",
     "apps": [
+      {
+        "id": "pulso",
+        "category": "Puzzle",
+        "name": "pulso: Wordless Logic Puzzle",
+        "tagline": "Fifty handcrafted minimalist logic puzzles with zero words of instruction.",
+        "description": "Every puzzle is an abstract geometric mechanism discovered through touch, observation, and intuition. Zero timers, zero scores, and zero fail states. 100% offline.",
+        "highlights": [
+          "Fifty handcrafted minimalist logic puzzles with zero words of instruction",
+          "Ten core rule modules creating 50 distinct 'Aha!' moments",
+          "Zero fail states: no lives, no countdown timers, no scores",
+          "Gentle 3-tier visual hint system without text spoilers",
+          "100% offline gameplay with no account or internet required"
+        ]
+      },
       {
         "id": "puzzena",
         "category": "Puzzle",

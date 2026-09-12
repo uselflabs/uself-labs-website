@@ -41,6 +41,22 @@ const playUrl = (pkg: string) =>
 
 const PUBLISHED_APPS: PublishedApp[] = [
   {
+    id: "pulso",
+    kind: "game",
+    packageName: "com.uself.pulse",
+    playUrl: playUrl("com.uself.pulse"),
+    webUrl: "https://pulso.uselflabs.com/",
+    icon: { src: "/apps/pulso-icon.webp", width: 192, height: 192 },
+    feature: { src: "/apps/pulso-feature.webp", width: 1024, height: 500 },
+    screenshots: [
+      { src: "/apps/pulso-shot-0.webp", width: 640, height: 1138 },
+      { src: "/apps/pulso-shot-1.webp", width: 640, height: 1138 },
+      { src: "/apps/pulso-shot-2.webp", width: 640, height: 1138 },
+      { src: "/apps/pulso-shot-3.webp", width: 640, height: 1138 },
+    ],
+    screenshotAspect: "9 / 16",
+  },
+  {
     id: "puzzena",
     kind: "game",
     packageName: "com.uself.logicpuzzles",

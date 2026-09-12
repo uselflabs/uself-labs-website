@@ -20,18 +20,76 @@ export function AppDetailList({
   highlightsLabel: string;
 }) {
   return (
-    <div className="divide-y divide-border">
-      {apps.map((app, index) => (
-        <AppDetail
-          key={app.id}
-          app={app}
-          eager={index === 0}
-          playLabel={playLabel}
-          webLabel={webLabel}
-          screenshotsLabel={screenshotsLabel}
-          highlightsLabel={highlightsLabel}
-        />
-      ))}
+    <div>
+      {/* Bento Quick-Navigation Shelf */}
+      <section className="border-b border-border bg-surface-raised/40 py-6 backdrop-blur">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-2 gap-2.5 sm:grid-cols-3 lg:grid-cols-5">
+            {apps.map((app) => {
+              const asset = APPS_BY_ID[app.id];
+              const isPulso = app.id === "pulso";
+              return (
+                <a
+                  key={app.id}
+                  href={`#${app.id}`}
+                  className={`btn-tactile group flex items-center gap-3 rounded-xl border p-2.5 transition-all ${
+                    isPulso
+                      ? "border-amber-500/40 bg-surface-card/90 hover:border-amber-400 hover:shadow-md hover:shadow-amber-950/20"
+                      : "border-border bg-surface/70 hover:border-border-strong hover:bg-surface-card"
+                  }`}
+                >
+                  <Image
+                    src={asset.icon.src}
+                    alt=""
+                    width={asset.icon.width}
+                    height={asset.icon.height}
+                    sizes="40px"
+                    className={`h-10 w-10 shrink-0 rounded-[22%] border shadow-sm transition-transform duration-300 group-hover:scale-105 ${
+                      isPulso ? "border-amber-500/50" : "border-border"
+                    }`}
+                  />
+                  <div className="min-w-0">
+                    <div className="flex items-center gap-1.5">
+                      <p
+                        className={`truncate text-xs font-semibold transition-colors ${
+                          isPulso
+                            ? "text-text-primary group-hover:text-amber-300"
+                            : "text-text-primary group-hover:text-accent-cyan"
+                        }`}
+                      >
+                        {app.name.split(":")[0]}
+                      </p>
+                      {isPulso && (
+                        <span className="shrink-0 rounded bg-amber-500/20 px-1 py-0.5 text-[9px] font-bold text-amber-300">
+                          NEW
+                        </span>
+                      )}
+                    </div>
+                    <p className="truncate text-[11px] text-text-muted">
+                      {app.category}
+                    </p>
+                  </div>
+                </a>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* App Details List */}
+      <div className="divide-y divide-border">
+        {apps.map((app, index) => (
+          <AppDetail
+            key={app.id}
+            app={app}
+            eager={index === 0}
+            playLabel={playLabel}
+            webLabel={webLabel}
+            screenshotsLabel={screenshotsLabel}
+            highlightsLabel={highlightsLabel}
+          />
+        ))}
+      </div>
     </div>
   );
 }
@@ -52,6 +110,7 @@ function AppDetail({
   highlightsLabel: string;
 }) {
   const asset = APPS_BY_ID[app.id];
+  const isPulso = app.id === "pulso";
 
   return (
     <section id={app.id} className="scroll-mt-24">
@@ -66,12 +125,27 @@ function AppDetail({
                   width={64}
                   height={64}
                   priority={eager}
-                  className="h-16 w-16 shrink-0 rounded-[22%] border border-border shadow-lg shadow-black/40"
+                  className={`h-16 w-16 shrink-0 rounded-[22%] border shadow-lg shadow-black/40 ${
+                    isPulso ? "border-amber-500/50" : "border-border"
+                  }`}
                 />
                 <div>
-                  <span className="rounded-full bg-accent/15 px-2.5 py-0.5 text-xs font-semibold text-accent-cyan">
-                    {app.category}
-                  </span>
+                  <div className="flex items-center gap-2">
+                    <span
+                      className={`rounded-full px-2.5 py-0.5 text-xs font-semibold ${
+                        isPulso
+                          ? "border border-amber-500/30 bg-amber-500/15 text-amber-300"
+                          : "bg-accent/15 text-accent-cyan"
+                      }`}
+                    >
+                      {app.category}
+                    </span>
+                    {isPulso && (
+                      <span className="rounded-full border border-amber-500/40 bg-amber-500/20 px-2 py-0.5 text-[10px] font-bold text-amber-300">
+                        NEW RELEASE
+                      </span>
+                    )}
+                  </div>
                   <h2 className="mt-1.5 text-2xl font-bold tracking-tight text-text-primary">
                     {app.name}
                   </h2>
@@ -97,7 +171,9 @@ function AppDetail({
                     <Check
                       size={16}
                       weight="bold"
-                      className="mt-0.5 shrink-0 text-accent-cyan"
+                      className={`mt-0.5 shrink-0 ${
+                        isPulso ? "text-amber-400" : "text-accent-cyan"
+                      }`}
                       aria-hidden
                     />
                     <span>{highlight}</span>
@@ -121,7 +197,11 @@ function AppDetail({
                     href={asset.webUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="btn-tactile inline-flex items-center gap-2 rounded-full border border-border-strong bg-surface-card px-5 py-2.5 text-sm font-semibold text-text-primary transition-all hover:border-accent hover:text-accent-cyan"
+                    className={`btn-tactile inline-flex items-center gap-2 rounded-full border bg-surface-card px-5 py-2.5 text-sm font-semibold text-text-primary transition-all ${
+                      isPulso
+                        ? "border-amber-500/40 hover:border-amber-400 hover:text-amber-300"
+                        : "border-border-strong hover:border-accent hover:text-accent-cyan"
+                    }`}
                   >
                     <Globe size={18} weight="regular" aria-hidden />
                     <span>{webLabel || "Website"}</span>

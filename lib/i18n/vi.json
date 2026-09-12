@@ -18,7 +18,10 @@
     "ctaPrimary": "Bắt đầu dự án",
     "ctaSecondary": "Xem sản phẩm",
     "playLabel": "Xem trên Google Play",
-    "webLabel": "Trang giới thiệu"
+    "playLabelCompact": "Google Play",
+    "webLabel": "Trang giới thiệu",
+    "webLabelCompact": "Website",
+    "detailsLabel": "Xem chi tiết"
   },
   "footer": {
     "columns": {
@@ -32,7 +35,9 @@
   "home": {
     "hero": {
       "headline": "Agent chạy được trên codebase thật, không chỉ trong bản demo.",
-      "appsLabel": "Các ứng dụng và trò chơi USelf Labs đã phát hành trên Google Play"
+      "appsLabel": "Các ứng dụng và trò chơi USelf Labs đã phát hành trên Google Play",
+      "featuredBadge": "Mới phát hành",
+      "liveCountSuffix": "sản phẩm phát hành"
     },
     "stack": {
       "heading": "Công nghệ sử dụng hằng ngày",
@@ -102,8 +107,9 @@
     },
     "selectedWork": {
       "heading": "Sản phẩm tự phát hành",
-      "lead": "Bốn ứng dụng và trò chơi hiện có trên Google Play, do USelf Labs tự phát triển và phát hành.",
-      "viewAll": "Xem chi tiết sản phẩm"
+      "lead": "Năm ứng dụng và trò chơi hiện có trên Google Play, do USelf Labs tự phát triển và phát hành.",
+      "viewAll": "Xem chi tiết sản phẩm",
+      "featuredBadge": "Mới phát hành"
     },
     "ctaBand": {
       "headline": "Bạn có dự án cần xây dựng?",
@@ -195,7 +201,7 @@
         },
         {
           "question": "USelf Labs có tự phát hành sản phẩm của riêng mình không?",
-          "answer": "Có. Hiện có bốn ứng dụng và trò chơi trên Google Play là Puzzena, Velora, Dream Courier và 1000 Lives."
+          "answer": "Có. Hiện có năm ứng dụng và trò chơi trên Google Play là pulso, Puzzena, Velora, Dream Courier và 1000 Lives."
         },
         {
           "question": "Công cụ của USelf Labs có mã nguồn mở không?",
@@ -224,6 +230,20 @@
     "screenshotsLabel": "Ảnh chụp trong ứng dụng",
     "highlightsLabel": "Điểm nổi bật",
     "apps": [
+      {
+        "id": "pulso",
+        "category": "Trí tuệ",
+        "name": "pulso: Wordless Logic Puzzle",
+        "tagline": "50 câu đố logic tối giản không một lời hướng dẫn, khám phá bằng trực giác thuần túy.",
+        "description": "Mỗi câu đố là một cơ chế hình học tương tác. Bằng cách chạm, quan sát và suy luận, người chơi tự khám phá quy luật mà không cần một câu chữ chỉ dẫn. Không giới hạn thời gian, không tính điểm, không màn thua. Chơi offline 100%.",
+        "highlights": [
+          "50 câu đố logic hình học thủ công không một chữ hướng dẫn",
+          "10 mô-đun quy luật độc đáo tạo ra 50 khoảnh khắc 'Aha!' bất ngờ",
+          "Trải nghiệm êm dịu: không bộ đếm giờ, không tính điểm, không màn thua",
+          "Hệ thống gợi ý trực quan 3 cấp độ tinh tế không làm lộ đáp án",
+          "Chơi offline 100%, không cần kết nối mạng hay tạo tài khoản"
+        ]
+      },
       {
         "id": "puzzena",
         "category": "Trí tuệ",

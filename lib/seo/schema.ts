@@ -114,6 +114,7 @@ export function softwareApplicationSchema(
   const isGame = asset.kind === "game";
 
   const categoryMap: Record<string, string> = {
+    pulso: "PuzzleApplication",
     puzzena: "PuzzleApplication",
     "dream-courier": "RolePlayingApplication",
     "1000-lives": "SimulationApplication",
@@ -121,6 +122,7 @@ export function softwareApplicationSchema(
   };
 
   const genreMap: Record<string, string[]> = {
+    pulso: ["Puzzle", "Logic Game", "Minimalist Puzzle", "Offline Game"],
     puzzena: ["Puzzle", "Logic Game", "Brain Teaser", "Picross", "Binairo", "Nonogram"],
     "dream-courier": ["Role Playing", "Idle RPG", "Cozy Game", "Adventure"],
     "1000-lives": ["Simulation", "Card Game", "Life Simulator"],

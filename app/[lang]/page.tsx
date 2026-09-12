@@ -61,6 +61,11 @@ export default async function HomePage({
         locale={locale}
         selectedWork={home.selectedWork}
         apps={work.apps}
+        playLabel={common.playLabel}
+        playLabelCompact={common.playLabelCompact}
+        webLabel={common.webLabel}
+        webLabelCompact={common.webLabelCompact}
+        detailsLabel={common.detailsLabel}
       />
       <CtaBand
         locale={locale}

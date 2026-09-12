@@ -52,6 +52,8 @@ export async function generateMetadata({
       "Backend microservices",
       "Fullstack web development",
       "Mobile games",
+      "pulso wordless puzzle",
+      "Minimalist logic puzzle",
       "Puzzena logic puzzles",
       "Binary puzzle",
       "Tents and trees",

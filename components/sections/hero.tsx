@@ -53,7 +53,7 @@ export function Hero({
           </div>
         </Reveal>
 
-        {/* 4 published apps in a 2x2 interactive constellation grid */}
+        {/* Published apps constellation: Featured spotlight + 2x2 grid */}
         <Reveal delay={0.12}>
           <div className="relative">
             <div
@@ -70,41 +70,98 @@ export function Hero({
                   {hero.appsLabel}
                 </span>
                 <span className="rounded-full bg-accent/15 px-2.5 py-0.5 text-[11px] font-medium text-accent-cyan">
-                  4 Live Products
+                  {apps.length} {hero.liveCountSuffix || "Live Products"}
                 </span>
               </div>
 
-              <ul className="grid grid-cols-2 gap-3 sm:gap-4">
-                {apps.map((app) => {
-                  const asset = APPS_BY_ID[app.id];
-                  return (
-                    <li key={app.id}>
-                      <Link
-                        href={`/${locale}/work#${app.id}`}
-                        className="group flex items-center gap-3 rounded-xl border border-border bg-surface/80 p-3 transition-all hover:border-border-strong hover:bg-surface-card hover:shadow-md"
-                      >
-                        <Image
-                          src={asset.icon.src}
-                          alt=""
-                          width={asset.icon.width}
-                          height={asset.icon.height}
-                          priority
-                          sizes="56px"
-                          className="h-12 w-12 shrink-0 rounded-[22%] border border-border-strong shadow-md transition-transform duration-300 group-hover:scale-105"
-                        />
-                        <div className="min-w-0">
-                          <p className="truncate text-xs font-semibold text-text-primary group-hover:text-accent-cyan transition-colors">
-                            {app.name.split(":")[0]}
-                          </p>
-                          <p className="truncate text-[11px] text-text-muted">
-                            {app.category}
-                          </p>
-                        </div>
-                      </Link>
-                    </li>
-                  );
-                })}
-              </ul>
+              {apps.length > 0 && (() => {
+                const featured = apps[0];
+                const featuredAsset = APPS_BY_ID[featured.id];
+                const rest = apps.slice(1);
+
+                return (
+                  <div>
+                    {/* Featured flagship app spotlight */}
+                    {featured && (
+                      <div className="mb-3 sm:mb-4">
+                        <Link
+                          href={`/${locale}/work#${featured.id}`}
+                          className="group relative flex items-center justify-between gap-4 overflow-hidden rounded-xl border border-amber-500/30 bg-surface/95 p-3.5 shadow-md shadow-amber-950/20 transition-all hover:border-amber-400/60 hover:bg-surface-card"
+                        >
+                          <div
+                            aria-hidden
+                            className="absolute -right-8 -top-8 h-28 w-28 rounded-full bg-amber-500/10 blur-xl transition-opacity group-hover:opacity-100"
+                          />
+                          <div className="flex items-center gap-3.5 min-w-0">
+                            {featuredAsset && (
+                              <Image
+                                src={featuredAsset.icon.src}
+                                alt=""
+                                width={featuredAsset.icon.width}
+                                height={featuredAsset.icon.height}
+                                priority
+                                sizes="56px"
+                                className="h-12 w-12 shrink-0 rounded-[22%] border border-amber-500/40 shadow-md shadow-black/40 transition-transform duration-300 group-hover:scale-105"
+                              />
+                            )}
+                            <div className="min-w-0">
+                              <div className="flex items-center gap-2">
+                                <span className="rounded-full bg-amber-500/15 border border-amber-500/30 px-2 py-0.5 text-[10px] font-semibold text-amber-300">
+                                  {hero.featuredBadge || "New Release"}
+                                </span>
+                                <span className="text-[11px] text-text-muted">
+                                  {featured.category}
+                                </span>
+                              </div>
+                              <p className="truncate text-sm font-semibold text-text-primary group-hover:text-amber-300 transition-colors mt-0.5">
+                                {featured.name}
+                              </p>
+                            </div>
+                          </div>
+                          <ArrowRight
+                            size={16}
+                            weight="bold"
+                            className="shrink-0 text-text-muted transition-transform group-hover:translate-x-0.5 group-hover:text-amber-300"
+                            aria-hidden
+                          />
+                        </Link>
+                      </div>
+                    )}
+
+                    {/* Remaining apps in 2x2 grid */}
+                    <ul className="grid grid-cols-2 gap-3 sm:gap-4">
+                      {rest.map((app) => {
+                        const asset = APPS_BY_ID[app.id];
+                        return (
+                          <li key={app.id}>
+                            <Link
+                              href={`/${locale}/work#${app.id}`}
+                              className="group flex items-center gap-3 rounded-xl border border-border bg-surface/80 p-3 transition-all hover:border-border-strong hover:bg-surface-card hover:shadow-md"
+                            >
+                              <Image
+                                src={asset.icon.src}
+                                alt=""
+                                width={asset.icon.width}
+                                height={asset.icon.height}
+                                sizes="44px"
+                                className="h-10 w-10 shrink-0 rounded-[22%] border border-border-strong shadow-sm transition-transform duration-300 group-hover:scale-105"
+                              />
+                              <div className="min-w-0">
+                                <p className="truncate text-xs font-semibold text-text-primary group-hover:text-accent-cyan transition-colors">
+                                  {app.name.split(":")[0]}
+                                </p>
+                                <p className="truncate text-[11px] text-text-muted">
+                                  {app.category}
+                                </p>
+                              </div>
+                            </Link>
+                          </li>
+                        );
+                      })}
+                    </ul>
+                  </div>
+                );
+              })()}
             </div>
           </div>
         </Reveal>
