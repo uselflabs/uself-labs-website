@@ -4,7 +4,7 @@ import { GithubLogo, GooglePlayLogo } from "@phosphor-icons/react/dist/ssr";
 import type { Locale } from "@/lib/i18n/config";
 import type { Dictionary } from "@/lib/i18n/dictionaries";
 import { getPositioning } from "@/lib/seo/positioning";
-import { NAV_ROUTES } from "@/lib/constants";
+import { LEGAL_ROUTES, NAV_ROUTES } from "@/lib/constants";
 import { GITHUB_URL, PLAY_DEVELOPER_URL } from "@/lib/apps";
 
 export function Footer({
@@ -87,9 +87,23 @@ export function Footer({
           </div>
         </div>
 
-        <p className="mt-12 border-t border-border pt-6 text-sm text-text-faint">
-          {year} {dictionary.footer.copyright}
-        </p>
+        <div className="mt-12 flex flex-col gap-4 border-t border-border pt-6 text-sm text-text-faint sm:flex-row sm:items-center sm:justify-between">
+          <p>
+            {year} {dictionary.footer.copyright}
+          </p>
+          <ul className="flex gap-6">
+            {LEGAL_ROUTES.map((route) => (
+              <li key={route.key}>
+                <Link
+                  href={`/${locale}${route.path}`}
+                  className="transition-colors hover:text-text-primary"
+                >
+                  {dictionary.footer.legal[route.key]}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </footer>
   );

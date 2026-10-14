@@ -30,7 +30,11 @@
     },
     "email": "admin@uselflabs.com",
     "address": "Việt Nam",
-    "copyright": "USelf Labs. Giữ toàn quyền."
+    "copyright": "USelf Labs. Giữ toàn quyền.",
+    "legal": {
+      "privacy": "Chính sách quyền riêng tư",
+      "terms": "Điều khoản dịch vụ"
+    }
   },
   "home": {
     "hero": {
@@ -379,5 +383,246 @@
   "a11y": {
     "skipToContent": "Chuyển tới nội dung chính",
     "switchLanguage": "Chuyển sang tiếng Anh"
+  },
+  "legal": {
+    "lastUpdatedLabel": "Cập nhật lần cuối",
+    "tocLabel": "Trong trang này",
+    "privacy": {
+      "title": "Chính sách quyền riêng tư",
+      "intro": "Chính sách này giải thích USelf Labs thu thập những thông tin nào qua uselflabs.com và các ứng dụng, trò chơi chúng tôi phát hành trên Google Play, cách chúng tôi sử dụng thông tin đó và những lựa chọn bạn có.",
+      "lastUpdated": "2026-10-14",
+      "sections": [
+        {
+          "id": "scope",
+          "heading": "Chúng tôi là ai và phạm vi áp dụng",
+          "paragraphs": [
+            "USelf Labs (\"chúng tôi\") là một phòng lab phần mềm tại Việt Nam. Chính sách này áp dụng cho website uselflabs.com và các ứng dụng, trò chơi được phát hành dưới tài khoản nhà phát triển USelf Labs trên Google Play.",
+            "Sản phẩm có website hoặc thông báo quyền riêng tư riêng có thể bổ sung chi tiết dành riêng cho sản phẩm đó. Khi có khác biệt, thông báo riêng của sản phẩm được ưu tiên áp dụng cho sản phẩm đó."
+          ]
+        },
+        {
+          "id": "information-we-collect",
+          "heading": "Thông tin chúng tôi thu thập",
+          "paragraphs": [
+            "Chúng tôi chỉ thu thập những gì cần thiết để vận hành dịch vụ:"
+          ],
+          "items": [
+            "Biểu mẫu liên hệ: họ tên, địa chỉ email, công ty (không bắt buộc), nội dung tin nhắn và ngôn ngữ của trang bạn gửi.",
+            "Nhật ký kỹ thuật: như hầu hết các website, máy chủ và nhà cung cấp mạng của chúng tôi ghi lại địa chỉ IP, loại trình duyệt, trang được truy cập và thời gian để giữ cho website an toàn và hoạt động ổn định.",
+            "Dữ liệu ứng dụng: tiến trình chơi và cài đặt thường được lưu trên thiết bị của bạn. Nếu ứng dụng có lưu trữ đám mây hoặc tài khoản, ứng dụng sẽ cho bạn biết những gì được lưu.",
+            "Quảng cáo và chẩn đoán trong ứng dụng: một số ứng dụng hiển thị quảng cáo qua Google AdMob và sử dụng Google Play services. Các dịch vụ này có thể thu thập mã định danh thiết bị như mã nhận dạng quảng cáo, thông tin thiết bị và ứng dụng, vị trí gần đúng suy ra từ địa chỉ IP, cùng dữ liệu về sự cố hoặc hiệu năng.",
+            "Giao dịch mua: giao dịch mua trong ứng dụng được Google Play xử lý. Chúng tôi nhận xác nhận giao dịch nhưng không bao giờ nhận thông tin thẻ thanh toán của bạn."
+          ]
+        },
+        {
+          "id": "how-we-use",
+          "heading": "Cách chúng tôi sử dụng thông tin",
+          "items": [
+            "Để phản hồi yêu cầu của bạn và trao đổi về các dự án tiềm năng.",
+            "Để vận hành, bảo mật và cải thiện website cũng như các ứng dụng.",
+            "Để hiển thị quảng cáo giúp một số ứng dụng được miễn phí và đo lường hiệu quả quảng cáo.",
+            "Để cung cấp và khôi phục các giao dịch mua trong ứng dụng trên thiết bị của bạn.",
+            "Để tuân thủ nghĩa vụ pháp lý và thực thi Điều khoản dịch vụ."
+          ]
+        },
+        {
+          "id": "cookies",
+          "heading": "Cookie và các công nghệ tương tự",
+          "paragraphs": [
+            "Website uselflabs.com không sử dụng cookie quảng cáo hay cookie phân tích. Nhà cung cấp mạng của chúng tôi có thể đặt các cookie thật sự cần thiết để bảo vệ website khỏi hành vi lạm dụng.",
+            "Trong ứng dụng, các SDK quảng cáo có thể sử dụng mã nhận dạng quảng cáo hoặc các mã định danh tương tự. Bạn có thể đặt lại hoặc xóa mã nhận dạng quảng cáo và tắt quảng cáo được cá nhân hóa trong phần cài đặt thiết bị (trên Android: Cài đặt > Google > Quảng cáo, hoặc Cài đặt > Quyền riêng tư > Quảng cáo)."
+          ]
+        },
+        {
+          "id": "sharing",
+          "heading": "Cách chúng tôi chia sẻ thông tin",
+          "paragraphs": [
+            "Chúng tôi không bán thông tin cá nhân của bạn. Chúng tôi chỉ chia sẻ trong các trường hợp sau:"
+          ],
+          "items": [
+            "Nhà cung cấp dịch vụ giúp chúng tôi vận hành, như nhà cung cấp hosting và mạng, dịch vụ nhắn tin chuyển thông báo từ biểu mẫu liên hệ đến đội ngũ của chúng tôi, và Google (AdMob, Google Play). Họ xử lý dữ liệu theo điều khoản và chính sách quyền riêng tư của riêng họ.",
+            "Khi pháp luật, lệnh của tòa án yêu cầu, hoặc để bảo vệ quyền, sự an toàn và tài sản của USelf Labs, người dùng hoặc người khác.",
+            "Trong trường hợp sáp nhập, mua lại hoặc chuyển nhượng tài sản; khi đó chính sách này tiếp tục áp dụng cho thông tin được chuyển giao."
+          ]
+        },
+        {
+          "id": "third-party",
+          "heading": "Dịch vụ bên thứ ba",
+          "paragraphs": [
+            "Dữ liệu do SDK của bên thứ ba thu thập chịu sự điều chỉnh của chính sách của nhà cung cấp đó. Với các dịch vụ của Google, xem policies.google.com/privacy và giải thích của Google về cách sử dụng thông tin từ ứng dụng đối tác tại policies.google.com/technologies/partner-sites."
+          ]
+        },
+        {
+          "id": "retention",
+          "heading": "Thời gian lưu giữ thông tin",
+          "paragraphs": [
+            "Chúng tôi lưu giữ yêu cầu liên hệ trong thời gian cần thiết để phản hồi và theo dõi công việc phát sinh, và xóa khi không còn cần đến. Nhật ký kỹ thuật được lưu trong một khoảng thời gian giới hạn phục vụ bảo mật và xử lý sự cố. Dữ liệu lưu trên thiết bị của bạn sẽ còn đó cho đến khi bạn xóa dữ liệu ứng dụng hoặc gỡ cài đặt."
+          ]
+        },
+        {
+          "id": "your-rights",
+          "heading": "Lựa chọn và quyền của bạn",
+          "paragraphs": [
+            "Tùy theo nơi bạn sinh sống, bạn có thể có quyền truy cập, chỉnh sửa, xóa hoặc hạn chế việc sử dụng thông tin cá nhân, cũng như phản đối một số hoạt động xử lý. Để gửi yêu cầu, hãy email cho chúng tôi tại admin@uselflabs.com. Chúng tôi sẽ phản hồi trong thời gian hợp lý và có thể cần xác minh danh tính của bạn trước."
+          ]
+        },
+        {
+          "id": "children",
+          "heading": "Quyền riêng tư của trẻ em",
+          "paragraphs": [
+            "Dịch vụ của chúng tôi không hướng đến trẻ em dưới 13 tuổi hoặc dưới độ tuổi tối thiểu theo quy định tại quốc gia của bạn. Chúng tôi không cố ý thu thập thông tin cá nhân của trẻ em. Nếu bạn cho rằng một trẻ em đã cung cấp thông tin cá nhân cho chúng tôi, hãy liên hệ để chúng tôi xóa thông tin đó."
+          ]
+        },
+        {
+          "id": "security",
+          "heading": "Bảo mật",
+          "paragraphs": [
+            "Chúng tôi áp dụng các biện pháp kỹ thuật và tổ chức hợp lý để bảo vệ thông tin, bao gồm kết nối được mã hóa (HTTPS). Không có phương thức truyền tải hay lưu trữ nào an toàn tuyệt đối, vì vậy chúng tôi không thể đảm bảo an toàn tuyệt đối."
+          ]
+        },
+        {
+          "id": "international",
+          "heading": "Chuyển dữ liệu ra nước ngoài",
+          "paragraphs": [
+            "Chúng tôi hoạt động tại Việt Nam và các nhà cung cấp dịch vụ của chúng tôi có thể xử lý dữ liệu ở các quốc gia khác. Khi sử dụng dịch vụ, bạn hiểu rằng thông tin của bạn có thể được chuyển đến và xử lý tại các quốc gia khác với nơi bạn sinh sống."
+          ]
+        },
+        {
+          "id": "changes",
+          "heading": "Thay đổi chính sách",
+          "paragraphs": [
+            "Chúng tôi có thể cập nhật chính sách này theo thời gian. Khi đó, chúng tôi sẽ thay đổi ngày \"Cập nhật lần cuối\" ở đầu trang. Những thay đổi quan trọng sẽ được thông báo rõ trên website hoặc trong các ứng dụng liên quan."
+          ]
+        },
+        {
+          "id": "contact",
+          "heading": "Liên hệ",
+          "paragraphs": [
+            "Mọi câu hỏi về chính sách này hoặc thông tin của bạn, vui lòng gửi đến admin@uselflabs.com."
+          ]
+        }
+      ]
+    },
+    "terms": {
+      "title": "Điều khoản dịch vụ",
+      "intro": "Các điều khoản này điều chỉnh việc bạn sử dụng uselflabs.com và các ứng dụng, trò chơi do USelf Labs phát hành. Vui lòng đọc kỹ.",
+      "lastUpdated": "2026-10-14",
+      "sections": [
+        {
+          "id": "acceptance",
+          "heading": "Chấp nhận điều khoản",
+          "paragraphs": [
+            "Khi truy cập website hoặc tải xuống và sử dụng ứng dụng của chúng tôi (gọi chung là \"Dịch vụ\"), bạn đồng ý với Điều khoản dịch vụ này và Chính sách quyền riêng tư. Nếu không đồng ý, vui lòng không sử dụng Dịch vụ."
+          ]
+        },
+        {
+          "id": "services",
+          "heading": "Dịch vụ của chúng tôi",
+          "paragraphs": [
+            "USelf Labs cung cấp thông tin về các công việc kỹ thuật của mình trên website này và phát hành ứng dụng, trò chơi qua Google Play. Chúng tôi có thể thay đổi, tạm ngừng hoặc chấm dứt bất kỳ phần nào của Dịch vụ vào bất kỳ lúc nào."
+          ]
+        },
+        {
+          "id": "license",
+          "heading": "Giấy phép sử dụng ứng dụng",
+          "paragraphs": [
+            "Chúng tôi cấp cho bạn giấy phép cá nhân, có giới hạn, không độc quyền, không thể chuyển nhượng và có thể thu hồi để tải xuống và sử dụng ứng dụng trên thiết bị bạn sở hữu hoặc kiểm soát, cho mục đích cá nhân và phi thương mại, phù hợp với các điều khoản này và Điều khoản dịch vụ của Google Play."
+          ]
+        },
+        {
+          "id": "purchases-and-ads",
+          "heading": "Mua hàng trong ứng dụng và quảng cáo",
+          "items": [
+            "Giao dịch mua trong ứng dụng được Google Play xử lý và tuân theo điều khoản thanh toán của Google Play. Yêu cầu hoàn tiền được giải quyết theo chính sách hoàn tiền của Google Play.",
+            "Vật phẩm ảo, gợi ý hoặc tính năng cao cấp không có giá trị tiền tệ bên ngoài ứng dụng và không thể quy đổi thành tiền thật.",
+            "Một số ứng dụng hiển thị quảng cáo do bên thứ ba cung cấp. Chúng tôi không chịu trách nhiệm về nội dung quảng cáo của bên thứ ba hay các sản phẩm được quảng cáo."
+          ]
+        },
+        {
+          "id": "acceptable-use",
+          "heading": "Sử dụng hợp lệ",
+          "paragraphs": [
+            "Khi sử dụng Dịch vụ, bạn đồng ý không:"
+          ],
+          "items": [
+            "Dịch ngược, giải mã, chỉnh sửa hoặc tạo sản phẩm phái sinh từ ứng dụng của chúng tôi, trừ khi pháp luật cho phép rõ ràng.",
+            "Sử dụng gian lận, bot hoặc công cụ can thiệp vào hoạt động bình thường của Dịch vụ hay trải nghiệm của người dùng khác.",
+            "Cố gắng truy cập trái phép vào hệ thống, hoặc gây gián đoạn, quá tải hay tấn công website và hạ tầng của chúng tôi.",
+            "Gửi thư rác, nội dung độc hại hoặc trái pháp luật qua biểu mẫu liên hệ hay bất kỳ kênh nào khác.",
+            "Sử dụng Dịch vụ theo bất kỳ cách nào vi phạm pháp luật hiện hành."
+          ]
+        },
+        {
+          "id": "intellectual-property",
+          "heading": "Sở hữu trí tuệ",
+          "paragraphs": [
+            "Dịch vụ, bao gồm phần mềm, thiết kế trò chơi, hình ảnh, văn bản, logo và tên USelf Labs, thuộc sở hữu của USelf Labs hoặc bên cấp phép và được pháp luật về sở hữu trí tuệ bảo hộ. Ngoài giấy phép nêu trên, các điều khoản này không trao cho bạn bất kỳ quyền nào đối với chúng. Mã nguồn mở chúng tôi công bố tuân theo giấy phép đi kèm mã nguồn đó."
+          ]
+        },
+        {
+          "id": "submissions",
+          "heading": "Nội dung bạn gửi",
+          "paragraphs": [
+            "Khi gửi yêu cầu hoặc góp ý, bạn xác nhận thông tin là chính xác và bạn có quyền chia sẻ. Chúng tôi có thể sử dụng góp ý để cải thiện sản phẩm mà không có nghĩa vụ nào với bạn. Vui lòng không gửi thông tin bảo mật qua biểu mẫu liên hệ trước khi hai bên thống nhất cách xử lý thông tin đó."
+          ]
+        },
+        {
+          "id": "client-work",
+          "heading": "Dự án khách hàng",
+          "paragraphs": [
+            "Các dịch vụ kỹ thuật chúng tôi cung cấp cho khách hàng được điều chỉnh bởi hợp đồng bằng văn bản riêng. Nếu hợp đồng đó mâu thuẫn với các điều khoản này, hợp đồng được ưu tiên áp dụng cho dự án đó."
+          ]
+        },
+        {
+          "id": "third-party",
+          "heading": "Liên kết và dịch vụ bên thứ ba",
+          "paragraphs": [
+            "Dịch vụ có thể liên kết đến hoặc dựa vào website và dịch vụ của bên thứ ba như Google Play và GitHub. Chúng tôi không kiểm soát và không chịu trách nhiệm về nội dung, chính sách hay tính khả dụng của chúng."
+          ]
+        },
+        {
+          "id": "disclaimer",
+          "heading": "Từ chối bảo đảm",
+          "paragraphs": [
+            "Dịch vụ được cung cấp \"nguyên trạng\" và \"tùy theo khả năng sẵn có\", không kèm bất kỳ bảo đảm nào, dù rõ ràng hay ngụ ý, bao gồm bảo đảm về khả năng thương mại, sự phù hợp cho một mục đích cụ thể và không vi phạm quyền. Chúng tôi không bảo đảm Dịch vụ sẽ không bị gián đoạn, không có lỗi, hay tiến trình đã lưu sẽ không bao giờ bị mất."
+          ]
+        },
+        {
+          "id": "liability",
+          "heading": "Giới hạn trách nhiệm",
+          "paragraphs": [
+            "Trong phạm vi tối đa pháp luật cho phép, USelf Labs không chịu trách nhiệm về bất kỳ thiệt hại gián tiếp, ngẫu nhiên, đặc biệt, hệ quả hay mang tính trừng phạt nào, hoặc bất kỳ tổn thất nào về dữ liệu, lợi nhuận hay doanh thu phát sinh từ việc bạn sử dụng Dịch vụ. Tổng trách nhiệm của chúng tôi đối với bất kỳ khiếu nại nào liên quan đến Dịch vụ được giới hạn ở số tiền bạn đã trả cho chúng tôi cho Dịch vụ đó trong mười hai tháng trước khiếu nại, hoặc 50 USD nếu bạn chưa trả khoản nào."
+          ]
+        },
+        {
+          "id": "termination",
+          "heading": "Chấm dứt",
+          "paragraphs": [
+            "Bạn có thể ngừng sử dụng Dịch vụ bất kỳ lúc nào bằng cách rời website hoặc gỡ cài đặt ứng dụng. Chúng tôi có thể tạm ngừng hoặc chấm dứt quyền truy cập của bạn nếu bạn vi phạm các điều khoản này. Những điều khoản mà về bản chất cần tiếp tục có hiệu lực sau khi chấm dứt, bao gồm sở hữu trí tuệ, từ chối bảo đảm và giới hạn trách nhiệm, vẫn tiếp tục được áp dụng."
+          ]
+        },
+        {
+          "id": "governing-law",
+          "heading": "Luật áp dụng",
+          "paragraphs": [
+            "Các điều khoản này được điều chỉnh bởi pháp luật Việt Nam. Mọi tranh chấp trước hết sẽ được giải quyết qua thương lượng thiện chí; nếu không thành, tranh chấp sẽ được đưa ra tòa án có thẩm quyền tại Việt Nam, trừ khi luật bảo vệ người tiêu dùng bắt buộc tại quốc gia của bạn quy định khác."
+          ]
+        },
+        {
+          "id": "changes",
+          "heading": "Thay đổi điều khoản",
+          "paragraphs": [
+            "Chúng tôi có thể cập nhật các điều khoản này theo thời gian. Ngày \"Cập nhật lần cuối\" cho biết lần thay đổi gần nhất. Việc bạn tiếp tục sử dụng Dịch vụ sau khi cập nhật đồng nghĩa với việc bạn chấp nhận điều khoản đã sửa đổi."
+          ]
+        },
+        {
+          "id": "contact",
+          "heading": "Liên hệ",
+          "paragraphs": [
+            "Mọi câu hỏi về các điều khoản này, vui lòng gửi đến admin@uselflabs.com."
+          ]
+        }
+      ]
+    }
   }
 }

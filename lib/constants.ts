@@ -12,3 +12,9 @@ export const NAV_ROUTES = [
   { key: "about", path: "/about" },
   { key: "contact", path: "/contact" },
 ] as const;
+
+/** Linked from the footer only, but still listed in the sitemap. */
+export const LEGAL_ROUTES = [
+  { key: "privacy", path: "/privacy" },
+  { key: "terms", path: "/terms" },
+] as const;

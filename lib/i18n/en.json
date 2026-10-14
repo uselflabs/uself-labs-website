@@ -30,7 +30,11 @@
     },
     "email": "admin@uselflabs.com",
     "address": "Vietnam",
-    "copyright": "USelf Labs. All rights reserved."
+    "copyright": "USelf Labs. All rights reserved.",
+    "legal": {
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service"
+    }
   },
   "home": {
     "hero": {
@@ -379,5 +383,246 @@
   "a11y": {
     "skipToContent": "Skip to main content",
     "switchLanguage": "Switch to Vietnamese"
+  },
+  "legal": {
+    "lastUpdatedLabel": "Last updated",
+    "tocLabel": "On this page",
+    "privacy": {
+      "title": "Privacy Policy",
+      "intro": "This policy explains what information USelf Labs collects through uselflabs.com and the apps and games we publish on Google Play, how we use it, and the choices you have.",
+      "lastUpdated": "2026-10-14",
+      "sections": [
+        {
+          "id": "scope",
+          "heading": "Who we are and what this covers",
+          "paragraphs": [
+            "USelf Labs (\"we\", \"us\") is a software lab based in Vietnam. This policy applies to our website at uselflabs.com and to the apps and games published under the USelf Labs developer account on Google Play.",
+            "A product with its own website or its own privacy notice may add details specific to that product. Where they differ, the product-specific notice applies to that product."
+          ]
+        },
+        {
+          "id": "information-we-collect",
+          "heading": "Information we collect",
+          "paragraphs": [
+            "We collect only what we need to run our services:"
+          ],
+          "items": [
+            "Contact form: your name, email address, company (optional), message, and the language of the page you sent it from.",
+            "Technical logs: like most websites, our servers and network provider record IP addresses, browser type, requested pages, and timestamps to keep the site secure and working.",
+            "App data: game progress and settings are generally stored on your device. If an app offers cloud saves or accounts, the app tells you what is stored.",
+            "Advertising and diagnostics in apps: some apps show ads through Google AdMob and use Google Play services. These may collect device identifiers such as the advertising ID, device and app information, approximate location derived from IP address, and crash or performance data.",
+            "Purchases: in-app purchases are processed by Google Play. We receive confirmation of the purchase but never your payment card details."
+          ]
+        },
+        {
+          "id": "how-we-use",
+          "heading": "How we use information",
+          "items": [
+            "To reply to your inquiries and discuss potential projects.",
+            "To operate, secure, and improve the website and our apps.",
+            "To show ads that keep some apps free, and to measure how those ads perform.",
+            "To deliver in-app purchases and restore them on your devices.",
+            "To comply with legal obligations and enforce our Terms of Service."
+          ]
+        },
+        {
+          "id": "cookies",
+          "heading": "Cookies and similar technologies",
+          "paragraphs": [
+            "The uselflabs.com website does not use advertising or analytics cookies. Our network provider may set strictly necessary cookies to protect the site against abuse.",
+            "Inside our apps, advertising SDKs may use the advertising ID or similar identifiers. You can reset or delete your advertising ID and opt out of personalized ads in your device settings (on Android: Settings > Google > Ads, or Settings > Privacy > Ads)."
+          ]
+        },
+        {
+          "id": "sharing",
+          "heading": "How we share information",
+          "paragraphs": [
+            "We do not sell your personal information. We share it only in these cases:"
+          ],
+          "items": [
+            "Service providers that help us run our services, such as our hosting and network providers, the messaging service that delivers contact form notifications to our team, and Google (AdMob, Google Play). They process data under their own terms and privacy policies.",
+            "When required by law, a court order, or to protect the rights, safety, and property of USelf Labs, our users, or others.",
+            "As part of a merger, acquisition, or sale of assets, in which case this policy continues to apply to the information transferred."
+          ]
+        },
+        {
+          "id": "third-party",
+          "heading": "Third-party services",
+          "paragraphs": [
+            "Data collected by third-party SDKs is governed by those providers' policies. For Google services, see policies.google.com/privacy and Google's explanation of how it uses information from partner apps at policies.google.com/technologies/partner-sites."
+          ]
+        },
+        {
+          "id": "retention",
+          "heading": "How long we keep information",
+          "paragraphs": [
+            "We keep contact inquiries for as long as needed to respond and to follow up on any resulting work, and delete them when they are no longer needed. Technical logs are kept for a limited period for security and troubleshooting. Data stored on your device stays there until you clear the app's data or uninstall it."
+          ]
+        },
+        {
+          "id": "your-rights",
+          "heading": "Your choices and rights",
+          "paragraphs": [
+            "Depending on where you live, you may have the right to access, correct, delete, or restrict the use of your personal information, and to object to certain processing. To make a request, email us at admin@uselflabs.com. We will respond within a reasonable time and may need to verify your identity first."
+          ]
+        },
+        {
+          "id": "children",
+          "heading": "Children's privacy",
+          "paragraphs": [
+            "Our services are not directed to children under 13, or the minimum age required in your country. We do not knowingly collect personal information from children. If you believe a child has given us personal information, contact us and we will delete it."
+          ]
+        },
+        {
+          "id": "security",
+          "heading": "Security",
+          "paragraphs": [
+            "We use reasonable technical and organizational measures to protect information, including encrypted connections (HTTPS). No method of transmission or storage is completely secure, so we cannot guarantee absolute security."
+          ]
+        },
+        {
+          "id": "international",
+          "heading": "International transfers",
+          "paragraphs": [
+            "We are based in Vietnam, and our service providers may process data in other countries. By using our services, you understand that your information may be transferred to and processed in countries other than your own."
+          ]
+        },
+        {
+          "id": "changes",
+          "heading": "Changes to this policy",
+          "paragraphs": [
+            "We may update this policy from time to time. When we do, we will change the \"Last updated\" date at the top of this page. Significant changes will be highlighted on the website or in the affected apps."
+          ]
+        },
+        {
+          "id": "contact",
+          "heading": "Contact us",
+          "paragraphs": [
+            "Questions about this policy or your information can be sent to admin@uselflabs.com."
+          ]
+        }
+      ]
+    },
+    "terms": {
+      "title": "Terms of Service",
+      "intro": "These terms govern your use of uselflabs.com and the apps and games published by USelf Labs. Please read them carefully.",
+      "lastUpdated": "2026-10-14",
+      "sections": [
+        {
+          "id": "acceptance",
+          "heading": "Acceptance of these terms",
+          "paragraphs": [
+            "By accessing our website or downloading and using our apps (together, the \"Services\"), you agree to these Terms of Service and our Privacy Policy. If you do not agree, please do not use the Services."
+          ]
+        },
+        {
+          "id": "services",
+          "heading": "Our services",
+          "paragraphs": [
+            "USelf Labs provides information about our engineering work on this website and publishes apps and games through Google Play. We may change, suspend, or discontinue any part of the Services at any time."
+          ]
+        },
+        {
+          "id": "license",
+          "heading": "License to use our apps",
+          "paragraphs": [
+            "We grant you a personal, limited, non-exclusive, non-transferable, revocable license to download and use our apps on devices you own or control, for personal and non-commercial purposes, in line with these terms and the Google Play Terms of Service."
+          ]
+        },
+        {
+          "id": "purchases-and-ads",
+          "heading": "In-app purchases and ads",
+          "items": [
+            "In-app purchases are processed by Google Play and are subject to Google Play's payment terms. Refund requests are handled under Google Play's refund policy.",
+            "Virtual items, hints, or premium features have no monetary value outside the app and cannot be exchanged for real money.",
+            "Some apps display ads provided by third parties. We are not responsible for the content of third-party ads or the products they promote."
+          ]
+        },
+        {
+          "id": "acceptable-use",
+          "heading": "Acceptable use",
+          "paragraphs": [
+            "When using the Services, you agree not to:"
+          ],
+          "items": [
+            "Reverse engineer, decompile, modify, or create derivative works of our apps, except where the law expressly allows it.",
+            "Use cheats, bots, or tools that interfere with the normal operation of the Services or other users' experience.",
+            "Attempt to gain unauthorized access to our systems, or disrupt, overload, or attack the website or its infrastructure.",
+            "Send spam, malicious content, or unlawful material through the contact form or any other channel.",
+            "Use the Services in any way that violates applicable laws."
+          ]
+        },
+        {
+          "id": "intellectual-property",
+          "heading": "Intellectual property",
+          "paragraphs": [
+            "The Services, including software, game designs, graphics, text, logos, and the USelf Labs name, are owned by USelf Labs or its licensors and are protected by intellectual property laws. Except for the license above, these terms do not grant you any rights to them. Open-source code we publish is governed by the license included with that code."
+          ]
+        },
+        {
+          "id": "submissions",
+          "heading": "Your submissions",
+          "paragraphs": [
+            "When you send us an inquiry or feedback, you confirm the information is accurate and that you have the right to share it. We may use feedback to improve our products without any obligation to you. Please do not send confidential information through the contact form until we have agreed on how it will be handled."
+          ]
+        },
+        {
+          "id": "client-work",
+          "heading": "Client projects",
+          "paragraphs": [
+            "Engineering services we provide to clients are governed by a separate written agreement. If that agreement conflicts with these terms, the agreement prevails for that project."
+          ]
+        },
+        {
+          "id": "third-party",
+          "heading": "Third-party links and services",
+          "paragraphs": [
+            "The Services may link to or rely on third-party websites and services, such as Google Play and GitHub. We do not control them and are not responsible for their content, policies, or availability."
+          ]
+        },
+        {
+          "id": "disclaimer",
+          "heading": "Disclaimer",
+          "paragraphs": [
+            "The Services are provided \"as is\" and \"as available\", without warranties of any kind, express or implied, including warranties of merchantability, fitness for a particular purpose, and non-infringement. We do not guarantee that the Services will be uninterrupted, error-free, or that saved progress will never be lost."
+          ]
+        },
+        {
+          "id": "liability",
+          "heading": "Limitation of liability",
+          "paragraphs": [
+            "To the fullest extent permitted by law, USelf Labs will not be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of data, profits, or revenue arising from your use of the Services. Our total liability for any claim relating to the Services is limited to the amount you paid us for the Service in question in the twelve months before the claim, or USD 50 if you paid nothing."
+          ]
+        },
+        {
+          "id": "termination",
+          "heading": "Termination",
+          "paragraphs": [
+            "You may stop using the Services at any time by leaving the website or uninstalling our apps. We may suspend or end your access if you violate these terms. Sections that by their nature should survive termination, including intellectual property, disclaimers, and limitation of liability, will continue to apply."
+          ]
+        },
+        {
+          "id": "governing-law",
+          "heading": "Governing law",
+          "paragraphs": [
+            "These terms are governed by the laws of Vietnam. Any dispute will first be resolved through good-faith negotiation; if that fails, it will be submitted to the competent courts of Vietnam, unless the mandatory consumer protection laws of your country provide otherwise."
+          ]
+        },
+        {
+          "id": "changes",
+          "heading": "Changes to these terms",
+          "paragraphs": [
+            "We may update these terms from time to time. The \"Last updated\" date shows when they last changed. Continuing to use the Services after an update means you accept the revised terms."
+          ]
+        },
+        {
+          "id": "contact",
+          "heading": "Contact us",
+          "paragraphs": [
+            "Questions about these terms can be sent to admin@uselflabs.com."
+          ]
+        }
+      ]
+    }
   }
 }
